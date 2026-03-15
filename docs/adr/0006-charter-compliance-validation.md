@@ -15,7 +15,7 @@ The Canadian Charter of Rights and Freedoms imposes constraints on the
 exercise of political power in Canada. While the Charter applies directly
 to government action and not to the internal rules of private organizations
 such as political parties, there are two practical reasons why Charter
-compliance is relevant to the PPPC's governance documents:
+compliance is relevant to the PPP's governance documents:
 
 **Reputational and democratic legitimacy.** A party that adopts internal
 governance rules that visibly contradict Charter rights — equal voting weight,

@@ -2,7 +2,7 @@
 
 ## Summary
 
-This addendum outlines how the PPPC reaches trustworthy, auditable decisions
+This addendum outlines how the PPP reaches trustworthy, auditable decisions
 on proposals, amendments, and governance questions through digital tooling.
 It describes a staged workflow for democratic decision-making, not a
 blockchain or distributed-consensus protocol.

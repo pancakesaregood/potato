@@ -38,7 +38,7 @@ character of the institution.
 
 ## Decision
 
-We will manage all PPPC constitutional, governance, bylaw, and policy
+We will manage all PPP constitutional, governance, bylaw, and policy
 documents as version-controlled plain text files in a public Git repository,
 subject to a structured CI/CD review pipeline before any change is merged.
 

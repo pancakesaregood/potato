@@ -2,7 +2,7 @@
 
 ## Summary
 
-This addendum sets environmental standards for the digital and physical infrastructure associated with PPPC governance systems.
+This addendum sets environmental standards for the digital and physical infrastructure associated with PPP governance systems.
 
 ## Design Principles
 

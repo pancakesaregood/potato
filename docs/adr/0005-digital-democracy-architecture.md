@@ -71,7 +71,7 @@ members can verify that their ballot was recorded as cast and that the
 final tally is consistent with all recorded ballots, without revealing
 how individual members voted.
 
-Vote records are published in `/proposals/PPPC-PROP-YYYY-NNN/vote_record.json`
+Vote records are published in `/proposals/PPP-PROP-YYYY-NNN/vote_record.json`
 after the voting period closes. The Electoral Officer administers voting
 and independently verifies the tally.
 

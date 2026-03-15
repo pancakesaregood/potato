@@ -27,7 +27,7 @@ affiliated body, not directly.
 subject to a defined intake and review process. The proposal's merit determines
 its progress, not the proposer's institutional position.
 
-The PPPC's governance-as-code architecture (ADR-0001) makes open submission
+The PPP's governance-as-code architecture (ADR-0001) makes open submission
 technically feasible at low operational cost: a member submitting a policy
 proposal is structurally equivalent to a developer opening a pull request.
 The CI/CD pipeline (ADR-0003) provides the same quality gate for a proposal
@@ -43,7 +43,7 @@ democratic benefits.
 ## Decision
 
 We will allow any Member in Good Standing to submit a policy proposal
-directly to the PPPC governance repository, subject to the following
+directly to the PPP governance repository, subject to the following
 structure:
 
 ### Submission Requirements
@@ -161,7 +161,7 @@ Description: Only National Council members, commission chairs, and
 parliamentary caucus members may submit proposals for convention consideration.
 
 Reason rejected: This is the standard top-down model described in the context
-section. It is explicitly incompatible with the PPPC's founding design
+section. It is explicitly incompatible with the PPP's founding design
 principles and the governance-as-code model's premise that governance
 legitimacy comes from transparent, accessible process rather than
 institutional position.

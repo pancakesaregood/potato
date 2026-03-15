@@ -11,7 +11,7 @@
 
 ## Context
 
-The PPPC governance pipeline includes stages where AI language models
+The PPP governance pipeline includes stages where AI language models
 contribute to analysis: constitutional review, comparative governance analysis,
 and adversarial threat modeling. These stages require substantial reasoning
 over large text corpora — tasks where AI assistance offers real efficiency
@@ -59,7 +59,7 @@ its designated output location.
    authority to accept, modify, or reject it. All AI findings are logged
    alongside the human panel's response.
 2. **Write scope limited to designated output files.** Agents write only to
-   `/proposals/PPPC-PROP-YYYY-NNN/<stage>_ai_report.md`. They have no
+   `/proposals/PPP-PROP-YYYY-NNN/<stage>_ai_report.md`. They have no
    write access to `constitution/`, `governance/`, `policy/`, or pipeline
    configuration files.
 3. **Read scope defined per agent.** Each agent is given a specific document

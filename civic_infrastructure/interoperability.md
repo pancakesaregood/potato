@@ -2,7 +2,7 @@
 
 ## Summary
 
-This addendum defines how PPPC systems should exchange data across civic, legal, and administrative boundaries.
+This addendum defines how PPP systems should exchange data across civic, legal, and administrative boundaries.
 
 ## Design Principles
 

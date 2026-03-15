@@ -5,7 +5,7 @@ AI agents such as Codex, Claude, and Gemini.
 
 ## Repository Architecture
 
-- `instances/canada/manifesto/`: authoritative policy articles for the PPPC manifesto
+- `instances/canada/manifesto/`: authoritative policy articles for the PPP manifesto
 - `civic_infrastructure/`: civic technology addendums (digital infrastructure,
   decision protocols, smart contracts, cryptography, interoperability)
 - `proposals/`: future proposals, experiments, and structured policy drafts

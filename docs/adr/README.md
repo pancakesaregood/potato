@@ -1,7 +1,7 @@
 # Architecture Decision Records
 
 This directory contains the Architecture Decision Records (ADRs) for the
-Peoples Potato Party of Canada (PPPC) governance repository.
+Peoples Potato Party (PPP) governance framework.
 
 ## What an ADR Does
 

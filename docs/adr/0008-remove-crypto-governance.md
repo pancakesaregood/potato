@@ -12,7 +12,7 @@
 
 ## Context
 
-Early drafts of the PPPC's technical governance layer included two addendums
+Early drafts of the PPP's technical governance layer included two addendums
 that described cryptocurrency-adjacent concepts:
 
 **`tokenomics.md`** proposed a model for civic tokens or credits — digital
@@ -28,7 +28,7 @@ document implied that distributed ledger technology was a live architectural
 option for core governance infrastructure.
 
 Both documents were included in a version of the project that positioned the
-PPPC governance system as an experiment in blockchain-based civic coordination.
+PPP governance system as an experiment in blockchain-based civic coordination.
 That framing has been retired.
 
 The project now focuses on **open-source civic governance** — the use of

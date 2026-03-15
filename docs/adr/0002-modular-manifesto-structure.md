@@ -21,7 +21,7 @@ document, and the entire platform is released or withheld as a unit.
 Changes to one area do not touch others. Positions can be proposed, reviewed,
 amended, and ratified on independent timelines.
 
-The PPPC's governance-as-code architecture (ADR-0001) creates a natural
+The PPP's governance-as-code architecture (ADR-0001) creates a natural
 pressure toward modularity: version control, pull requests, and automated
 validation all work better on focused, bounded files than on large monolithic
 documents. However, modularity introduces its own challenges: cross-cutting
@@ -36,7 +36,7 @@ continuous policy development.
 
 ## Decision
 
-We will organize the PPPC platform as a collection of individual policy
+We will organize the PPP platform as a collection of individual policy
 documents, one per policy domain, located in `/docs/policy/`. Each file:
 
 1. Covers one defined policy domain (e.g., `agriculture.md`,

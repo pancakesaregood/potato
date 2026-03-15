@@ -3,7 +3,7 @@
 ## Summary
 
 This addendum defines the limited and carefully governed use of smart contracts
-in PPPC policy systems. Smart contracts are tools for automating specific,
+in PPP policy systems. Smart contracts are tools for automating specific,
 well-defined civic workflows — they are not governance mechanisms. No
 governance decision, vote, or constitutional authority is delegated to a
 smart contract.
@@ -93,7 +93,7 @@ agencies is often delayed because collection and aggregation is manual.
 
 ### Common Implementation Requirements
 
-All smart contract deployments in PPPC-associated systems must:
+All smart contract deployments in PPP-associated systems must:
 
 - publish contract source code and plain-language descriptions before
   deployment
