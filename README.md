@@ -1,99 +1,146 @@
-# The Peoples Potato Party of Canada
+# Potato — Open Source Governance for Canada
 
-The Peoples Potato Party of Canada (PPPC) treats political governance like
-open-source infrastructure. The manifesto, technical addendums, institutional
-rules, and proposal process are stored as version-controlled Markdown so they
-can be reviewed, linted, discussed, and improved through pull requests.
+**What if political policy worked like open-source software?**
 
-This repository is fictional. It is a governance-as-code reference project, not
-legal advice.
+This is a civic governance experiment. The manifesto, institutional rules, and
+proposal process are stored as version-controlled text files. Changes are
+proposed as pull requests, reviewed by contributors, validated by automated
+checks, and merged when they reach consensus.
 
-## Governance as Code
+This repository is fictional — it is a reference experiment, not a registered
+political party and not legal advice.
 
-In this repository:
-
-- manifesto articles are modular files under `manifesto/`
-- digital governance addendums live under `tech_governance/`
-- institutional rules live under `docs/governance/`
-- future changes move through `proposals/` using `templates/proposal_template.md`
-- CI checks enforce formatting, proposal structure, and consistency
-- Charter review is treated as a mandatory governance gate, with automation used
-  as a placeholder process rather than a substitute for legal counsel
+---
 
 ```mermaid
 flowchart LR
-    A[Idea or concern] --> B[Draft article or proposal]
-    B --> C[Pull request review]
-    C --> D[CI governance checks]
-    D --> E[Council or convention review]
-    E --> F[Versioned policy state on main]
+    A([Citizen\nhas an idea]) --> B[Open\na GitHub Issue]
+    B --> C[Draft\na Proposal]
+    C --> D[Pull Request\n+ CI checks]
+    D --> E[Community\nReview]
+    E --> F{Consensus?}
+    F -- Yes --> G[Merged to\nManifesto]
+    F -- No --> H[Revised or\nArchived]
 ```
 
-## Repository Layout
+---
+
+## Start here
+
+| I want to... | Go to |
+| --- | --- |
+| Understand how the system works | [docs/how_to_participate.md](docs/how_to_participate.md) |
+| Propose a policy idea | [Open a Policy Proposal issue](../../issues/new/choose) |
+| Try a starter experiment | [experiments/](experiments/) |
+| Read the manifesto | [manifesto/](manifesto/) |
+| Understand the governance rules | [docs/governance/](docs/governance/) |
+| See where the project is going | [ROADMAP.md](ROADMAP.md) |
+
+---
+
+## How it works
+
+**1. Ideas start as issues**
+Open a GitHub Issue using one of the templates. Describe a policy problem,
+raise a question, or start a governance debate. No technical background needed.
+
+**2. Issues become proposals**
+Structured proposals live in `proposals/` and follow a standard template.
+They describe the problem, the mechanism, the costs, and the constitutional
+questions. Anyone can write one.
+
+**3. Proposals become pull requests**
+A PR against `manifesto/` or `docs/governance/` is how a proposal actually
+changes the canonical policy text. Opening a PR triggers automated checks.
+
+**4. Automated checks run on every PR**
+
+```
+Markdown lint          → are required headings present?
+Proposal validation    → does the template have all sections?
+Charter compliance     → are there potential rights conflicts to flag?
+Policy consistency     → does this contradict existing manifesto text?
+```
+
+Checks flag issues for human review — they do not make decisions.
+
+**5. Community review and deliberation**
+Contributors read, comment, question, and endorse. Governance Reviewers
+apply constitutional analysis. The goal is to improve proposals, not to block them.
+
+**6. Merge**
+When a proposal passes checks and reaches reviewer consensus, a Maintainer
+merges it. The commit history is the permanent audit trail.
+
+---
+
+## Repository layout
 
 ```text
-.
-|-- AGENTS.md
-|-- ARCHITECTURE.md
-|-- manifesto/
-|-- tech_governance/
-|-- proposals/
-|-- templates/
-|-- scripts/
-|-- docs/governance/
-`-- .github/workflows/policy-lint.yml
+manifesto/            one file per manifesto article
+civic_infrastructure/      civic technology addendums
+experiments/          starter policy experiments for new contributors
+proposals/            proposals under active development
+templates/            canonical proposal template
+docs/
+  governance/         constitution, bylaws, and governance process
+  adr/                Architecture Decision Records
+  how_to_participate.md
+  governance_roles.md
+scripts/              local and CI validation scripts
+.github/
+  workflows/          automated governance checks
+  ISSUE_TEMPLATE/     guided issue submission templates
+AGENTS.md             collaboration contract for AI agents
+ARCHITECTURE.md       system design and diagrams
+ROADMAP.md            development phases
 ```
 
-- `manifesto/`: one file per manifesto article
-- `tech_governance/`: civic technology addendums covering digital infrastructure,
-  decision protocols, smart contract use cases, cryptography, and interoperability
-- `proposals/`: future policy proposals and structured draft changes
-- `templates/`: canonical proposal template
-- `scripts/`: local validation scripts used by CI
-- `docs/governance/`: constitution, bylaws, and governance process rules
-- `.github/workflows/`: automated review gates
+---
 
-## Contribution Workflow
+## Try the experiments
 
-1. Create or update a manifesto article, technical addendum, or proposal.
-2. Keep required section headers intact so automation can validate structure.
-3. Run the local checks:
-   - `python scripts/validate_proposals.py`
-   - `python scripts/charter_compliance_placeholder.py`
-   - `python scripts/policy_consistency_check.py`
-4. Open a pull request and explain the policy change, risk, and intended
-   ratification path.
-5. Merge only when the repository text accurately reflects the proposal's
-   current status.
+Not ready to propose a full policy change? Start in `experiments/`. These
+are open questions with structured debate spaces — lower stakes than amending
+the manifesto, and designed for first-time contributors.
 
-## CI/CD Governance
+- [Digital Referendums](experiments/digital_referendums.md) — should Canada
+  have citizen-initiated referendums?
+- [Housing Policy](experiments/housing_policy_experiment.md) — what combination
+  of measures would reduce unaffordability without displacement?
+- [Energy Strategy](experiments/energy_strategy_experiment.md) — how should
+  Canada manage the energy transition fairly?
 
-The workflow in `.github/workflows/policy-lint.yml` performs four baseline
-checks:
+---
 
-- Markdown linting for structure and formatting
-- proposal template validation
-- Charter compliance placeholder review
-- policy consistency validation across manifesto and technical modules
+## Contributing
 
-The Charter compliance step is intentionally conservative. It enforces process
-and flags review needs, but it does not provide legal clearance on its own.
+See [docs/how_to_participate.md](docs/how_to_participate.md) for the full
+guide. The short version:
 
-## AI Collaboration
+1. Open an issue or comment on an existing one
+2. Copy `templates/proposal_template.md` to `proposals/your-title.md`
+3. Fill in the required sections
+4. Open a PR — CI checks run automatically
+5. Respond to reviewer comments and revise
+
+First-time contributors: the experiments folder is the best starting point.
+
+---
+
+## AI collaboration
 
 This repository is designed for human contributors and AI agents working
-together. The operational contract for AI agents lives in `AGENTS.md`.
+together. The operational contract for AI agents lives in [AGENTS.md](AGENTS.md).
 
-Agents should:
+Agents assist with documentation, review analysis, and governance validation.
+They do not merge PRs, do not change constitutional meaning without explicit
+human approval, and must label their contributions clearly.
 
-- preserve stable filenames
-- keep articles modular
-- use the proposal template for new initiatives
-- avoid silently changing constitutional meaning
-- record structural changes in `CHANGELOG.md`
+---
 
-## Governance Base Layer
+## Governance base layer
 
-The constitutional and organizational foundation of the party remains under
-`docs/governance/`. If manifesto text conflicts with the constitutional layer,
-the constitutional documents control until formally amended.
+The constitutional foundation lives in `docs/governance/`. If manifesto text
+conflicts with the constitutional layer, the constitutional documents control
+until formally amended through the governance process.

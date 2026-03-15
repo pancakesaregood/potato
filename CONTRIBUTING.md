@@ -8,7 +8,7 @@ authority still depends on the ratification path described in
 ## What Goes Where
 
 - `manifesto/`: one article per major policy theme
-- `tech_governance/`: digital democracy and implementation addendums
+- `civic_infrastructure/`: digital democracy and implementation addendums
 - `proposals/`: new policy proposals and structured amendments
 - `templates/`: canonical drafting templates
 - `docs/governance/`: constitution, bylaws, and process rules

@@ -5,8 +5,8 @@
 | Status | Accepted |
 | Date | 2026-03-15 |
 | Deciders | Founding National Convention |
-| Affected components | `tech_governance/`, `ARCHITECTURE.md`, `README.md`, `AGENTS.md` |
-| Supersedes | `tech_governance/tokenomics.md`, `tech_governance/distributed_ledger.md` |
+| Affected components | `civic_infrastructure/`, `ARCHITECTURE.md`, `README.md`, `AGENTS.md` |
+| Supersedes | `civic_infrastructure/tokenomics.md`, `civic_infrastructure/distributed_ledger.md` |
 
 ---
 
@@ -64,7 +64,7 @@ Retaining the crypto governance documents creates several problems:
 ## Decision
 
 We will remove `tokenomics.md` and `distributed_ledger.md` from
-`tech_governance/` and replace them with
+`civic_infrastructure/` and replace them with
 `civic_digital_infrastructure.md`, which describes the same problem space
 (accessible participation, audit trails, transparent governance infrastructure)
 using approaches that do not depend on cryptocurrency.
@@ -99,7 +99,7 @@ are affected by this change.
   eliminated by design, not as an afterthought.
 - Legal surface area related to token issuance and securities regulation is
   removed.
-- The remaining `tech_governance/` documents are all relevant to the project's
+- The remaining `civic_infrastructure/` documents are all relevant to the project's
   actual scope and contain no content that requires crypto expertise to
   understand or evaluate.
 
@@ -139,7 +139,7 @@ the operational system.
 
 Reason rejected: Documents in the repository imply endorsement or at least
 consideration. A document that is "exploratory only" but remains in the
-canonical `tech_governance/` directory will be read as authoritative by
+canonical `civic_infrastructure/` directory will be read as authoritative by
 contributors (human and AI) who encounter it later. Removing it is a cleaner
 architectural statement than annotating it. The concepts the documents explored
 are addressed in `civic_digital_infrastructure.md` using non-crypto approaches.

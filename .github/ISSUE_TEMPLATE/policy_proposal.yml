@@ -1,0 +1,122 @@
+name: Policy Proposal
+description: >
+  Submit a structured policy idea for debate and development. Use this when
+  you have a specific proposal ready to develop, not just a question.
+title: "[Proposal] "
+labels:
+  - proposal
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a policy proposal.
+
+        This issue is for developing your idea before it becomes a pull request.
+        If you are ready to submit a full proposal document, copy
+        `templates/proposal_template.md` to `proposals/` and open a PR instead.
+
+        Fill in the sections below as completely as you can. Incomplete sections
+        are fine — write what you know and flag what needs more work.
+
+  - type: input
+    id: title
+    attributes:
+      label: Proposal title
+      description: A short name for the proposal (5–10 words).
+      placeholder: "e.g. Federal Rent-to-Income Affordability Standard"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: policy_area
+    attributes:
+      label: Policy area
+      description: Which part of the manifesto does this relate to?
+      options:
+        - Digital democracy
+        - Equality and rights
+        - Justice and prison reform
+        - Housing and homelessness
+        - Environmental responsibility
+        - Drug epidemic response
+        - Governance and accountability
+        - Financial responsibility
+        - Climate change
+        - Indigenous relations and reconciliation
+        - Resource policy
+        - Healthcare
+        - Other (describe in problem statement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: >
+        What public problem or policy gap does this address? Be specific.
+        Who is affected and how?
+      placeholder: |
+        Describe the problem in plain language. Include scale (how many people
+        affected, what the current policy situation is) if you know it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: mechanism
+    attributes:
+      label: Proposed mechanism
+      description: >
+        What rule, program, or action are you proposing? How would it work?
+      placeholder: |
+        Describe the policy mechanism. Try to be specific about who does what,
+        and what the legal or administrative basis would be.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Known tradeoffs and objections
+      description: >
+        What are the strongest arguments against this proposal? What does it
+        cost, and who bears that cost?
+      placeholder: |
+        Honest engagement with tradeoffs makes proposals stronger. What would
+        a reasonable critic say?
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and comparisons
+      description: >
+        Are there comparable policies in other jurisdictions? What evidence
+        supports or complicates this approach?
+      placeholder: |
+        Links to research, comparable programs, or relevant data.
+    validations:
+      required: false
+
+  - type: textarea
+    id: charter
+    attributes:
+      label: Charter and constitutional notes
+      description: >
+        Does this proposal raise any Charter of Rights concerns, jurisdictional
+        questions, or constitutional issues? Write "unknown" if you are not sure.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Readiness
+      description: Check what applies to this proposal right now.
+      options:
+        - label: I want feedback before developing this further
+        - label: I am ready to draft a full proposal document
+        - label: I need help identifying the right manifesto article to amend
+        - label: I am looking for co-authors or researchers

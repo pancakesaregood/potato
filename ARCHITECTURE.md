@@ -5,6 +5,94 @@ Party of Canada governance platform. It explains how citizens, digital identity,
 policy workflows, and implementation bodies connect inside the repository and in
 future platform design.
 
+## Contribution and Governance Flow
+
+The path from a citizen's idea to a change in the canonical manifesto:
+
+```mermaid
+flowchart TD
+    A([Citizen has an idea]) --> B[GitHub Issue\nPolicy Proposal · Question · Governance]
+    B --> C[Draft Proposal\nproposals/ using template]
+    C --> D[Pull Request opened\nagainst manifesto/ or docs/]
+
+    D --> E{CI Pipeline}
+
+    E --> E1[Markdown lint]
+    E --> E2[Proposal validation]
+    E --> E3[Charter compliance check]
+    E --> E4[Policy consistency check]
+
+    E1 & E2 & E3 & E4 --> F{All checks pass?}
+
+    F -- No --> G[Author revises\nand pushes fix]
+    G --> E
+
+    F -- Yes --> H[Community Review\nContributors · Policy Authors\nGovernance Reviewers]
+
+    H --> I{Consensus\nreached?}
+
+    I -- No --> J[Revise or archive\nproposal]
+    I -- Yes --> K[Maintainer merges\nto main]
+
+    K --> L[Versioned policy state\nCommit history = audit trail]
+```
+
+## Governance Authority Hierarchy
+
+Where authority sits when there is a conflict between documents:
+
+```mermaid
+flowchart TD
+    A[Constitution\ndocs/governance/constitution.md] -->|controls| B
+    B[Bylaws\ndocs/governance/bylaws/] -->|inform| C
+    C[Architecture Decision Records\ndocs/adr/] -->|explain design of| D
+    D[Governance Documents\ncivic_infrastructure/ · ARCHITECTURE.md] -->|frame| E
+    E[Manifesto Articles\nmanifesto/] -->|express| F
+    F[Proposals Under Review\nproposals/]
+```
+
+If manifesto text conflicts with the constitutional layer, the constitutional
+documents control until formally amended.
+
+## Repository Data Flow
+
+How files move through the system from authoring to ratified state:
+
+```mermaid
+flowchart LR
+    subgraph Authoring
+        A[manifesto/\narticles]
+        B[proposals/\ndrafts]
+        C[civic_infrastructure/\naddendums]
+        D[experiments/\nstarter debates]
+    end
+
+    subgraph Validation
+        E[scripts/\nvalidate_proposals.py\ncharter_compliance.py\npolicy_consistency.py]
+        F[.github/workflows/\npolicy-lint.yml]
+    end
+
+    subgraph Authority
+        G[docs/governance/\nconstitution + bylaws]
+        H[docs/adr/\narchitectural decisions]
+    end
+
+    subgraph Output
+        I[main branch\nratified governance state]
+        J[CHANGELOG.md\naudit record]
+    end
+
+    A --> F
+    B --> F
+    C --> F
+    D --> B
+    E --> F
+    G --> F
+    H --> F
+    F -->|passes| I
+    I --> J
+```
+
 ## Architecture Overview
 
 ```mermaid
@@ -92,7 +180,7 @@ The governance platform is the authoring and decision environment. In the
 repository, it is expressed through:
 
 - `manifesto/` for policy articles
-- `tech_governance/` for civic technology addendums (digital infrastructure,
+- `civic_infrastructure/` for civic technology addendums (digital infrastructure,
   decision protocols, smart contract use cases, cryptographic security)
 - `proposals/` and `templates/` for change intake
 - `docs/governance/` for formal authority and process
@@ -100,7 +188,7 @@ repository, it is expressed through:
 
 This layer should be modular, reviewable, and easy to test.
 
-Note: earlier drafts of `tech_governance/` included addendums on tokenomics
+Note: earlier drafts of `civic_infrastructure/` included addendums on tokenomics
 and distributed-ledger governance. Those have been removed. The system does
 not rely on cryptocurrency, tokens, or blockchain consensus. See
 `docs/adr/0008-remove-crypto-governance.md` for the architectural rationale.
@@ -136,14 +224,22 @@ Implementation priorities:
 
 ```mermaid
 flowchart LR
-    A[manifesto] --> B[proposals]
-    B --> C[scripts]
+    A[manifesto/] --> B[proposals/]
+    B --> C[scripts/]
     C --> D[GitHub Actions]
-    D --> E[docs/governance]
-    E --> F[ratified governance state]
-    B --> G[tech_governance]
+    D --> E[docs/governance/]
+    E --> F[ratified governance state\non main branch]
+    B --> G[civic_infrastructure/]
+    H[experiments/] --> B
+    I[docs/adr/] --> E
 ```
 
 The repository is intentionally split so policy, implementation, and
 institutional authority can evolve without being collapsed into one file or one
 approval path.
+
+Related documents:
+
+- Contribution guide: [docs/how_to_participate.md](docs/how_to_participate.md)
+- Governance roles: [docs/governance_roles.md](docs/governance_roles.md)
+- Development roadmap: [ROADMAP.md](ROADMAP.md)

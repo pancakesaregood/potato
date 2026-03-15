@@ -1,0 +1,102 @@
+name: Governance Discussion
+description: >
+  Discuss how the repository governance system itself works. Use this for
+  meta-questions about process, rules, contribution workflows, or system design.
+title: "[Governance] "
+labels:
+  - governance
+  - meta
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for discussing the **governance system itself** —
+        how proposals move through review, how the CI pipeline works, how
+        roles and authority are structured — not for proposing new policies.
+
+        If your issue is about a policy topic (housing, climate, rights),
+        use the Policy Proposal or Policy Question template instead.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which part of the governance system does this concern?
+      options:
+        - Contribution workflow (how to submit proposals)
+        - CI/CD pipeline (automated checks)
+        - Roles and authority (maintainers, reviewers, contributors)
+        - Repository structure (where things live)
+        - Issue and PR templates
+        - Constitutional or bylaw question
+        - ADR (Architecture Decision Record)
+        - Accessibility (how to make participation easier)
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: What would you like to discuss?
+      description: >
+        Describe the governance question or issue you want to raise. Be as
+        specific as you can.
+      placeholder: |
+        e.g. The current proposal template requires a "Constitutional Review"
+        section but there is no guidance on what to write if you are not a
+        lawyer. Should there be examples or a checklist?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: How does the system currently handle this?
+      description: >
+        If relevant, describe the current rule or document that addresses
+        (or fails to address) this issue.
+      placeholder: |
+        Quote or link to the relevant part of the docs/ or ARCHITECTURE.md
+        if it exists.
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Do you have a suggested change?
+      description: >
+        If you have a specific improvement in mind, describe it here. This
+        is not required — raising a question without a solution is fine.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope of change (if proposing one)
+      description: >
+        If you are proposing a change to the governance system, how significant
+        is it?
+      options:
+        - Minor (documentation fix, clarification)
+        - Moderate (workflow change, new template or tool)
+        - Major (constitutional, bylaw, or ADR-level change)
+        - Not proposing a change — raising a question only
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: relevant_docs
+    attributes:
+      label: Relevant documents
+      description: Check which documents are most relevant to this discussion.
+      options:
+        - label: "`docs/how_to_participate.md`"
+        - label: "`docs/governance_roles.md`"
+        - label: "`ARCHITECTURE.md`"
+        - label: "`AGENTS.md`"
+        - label: "`docs/governance/constitution.md`"
+        - label: "`docs/adr/` (one or more ADRs)"
+        - label: "`.github/workflows/policy-lint.yml`"

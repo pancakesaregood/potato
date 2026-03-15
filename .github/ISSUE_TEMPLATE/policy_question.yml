@@ -1,0 +1,99 @@
+name: Policy Question
+description: >
+  Raise a policy question or start a debate. Use this when you want to
+  explore a topic but are not ready to propose a specific solution.
+title: "[Question] "
+labels:
+  - question
+  - discussion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Raising a good question is a contribution.
+
+        Use this template to open a debate, ask for input on a policy area,
+        or flag something in the manifesto that needs more thought. You do
+        not need to have an answer.
+
+  - type: input
+    id: question
+    attributes:
+      label: The question
+      description: State your question as clearly as you can in one sentence.
+      placeholder: "e.g. Should federal housing policy prioritize supply or affordability?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: policy_area
+    attributes:
+      label: Policy area
+      options:
+        - Digital democracy
+        - Equality and rights
+        - Justice and prison reform
+        - Housing and homelessness
+        - Environmental responsibility
+        - Drug epidemic response
+        - Governance and accountability
+        - Financial responsibility
+        - Climate change
+        - Indigenous relations and reconciliation
+        - Resource policy
+        - Healthcare
+        - Governance system design
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: >
+        Why is this question worth asking? What prompted it? Is there a gap
+        in the current manifesto this question relates to?
+      placeholder: |
+        A sentence or two explaining why this question matters and what you
+        are hoping the discussion will clarify.
+    validations:
+      required: true
+
+  - type: textarea
+    id: positions
+    attributes:
+      label: Known positions or perspectives
+      description: >
+        What are the main ways people disagree on this? You do not need to
+        be exhaustive — list what you know.
+      placeholder: |
+        e.g.
+        - Position A: ...
+        - Position B: ...
+        - Complicating factor: ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related manifesto articles or experiments
+      description: >
+        Which existing files in the repository are most relevant to this
+        question? (Filenames or links are fine.)
+    validations:
+      required: false
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What outcome are you hoping for?
+      options:
+        - I want to hear different perspectives before forming a view
+        - I want to identify whether a proposal is worth writing
+        - I want to flag a gap in the manifesto that someone should fill
+        - I want to understand how the governance system handles this type of question
+        - Something else (explain in context)
+    validations:
+      required: false
