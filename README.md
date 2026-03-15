@@ -45,7 +45,8 @@ flowchart LR
 ```
 
 - `manifesto/`: one file per manifesto article
-- `tech_governance/`: implementation addendums for digital democracy systems
+- `tech_governance/`: civic technology addendums covering digital infrastructure,
+  decision protocols, smart contract use cases, cryptography, and interoperability
 - `proposals/`: future policy proposals and structured draft changes
 - `templates/`: canonical proposal template
 - `scripts/`: local validation scripts used by CI

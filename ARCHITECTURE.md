@@ -92,12 +92,18 @@ The governance platform is the authoring and decision environment. In the
 repository, it is expressed through:
 
 - `manifesto/` for policy articles
-- `tech_governance/` for system addendums
+- `tech_governance/` for civic technology addendums (digital infrastructure,
+  decision protocols, smart contract use cases, cryptographic security)
 - `proposals/` and `templates/` for change intake
 - `docs/governance/` for formal authority and process
 - `.github/workflows/` and `scripts/` for automated checks
 
 This layer should be modular, reviewable, and easy to test.
+
+Note: earlier drafts of `tech_governance/` included addendums on tokenomics
+and distributed-ledger governance. Those have been removed. The system does
+not rely on cryptocurrency, tokens, or blockchain consensus. See
+`docs/adr/0008-remove-crypto-governance.md` for the architectural rationale.
 
 ## Policy Feedback Loop
 

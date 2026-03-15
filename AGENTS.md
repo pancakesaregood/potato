@@ -6,7 +6,8 @@ AI agents such as Codex, Claude, and Gemini.
 ## Repository Architecture
 
 - `manifesto/`: authoritative policy articles for the PPPC manifesto
-- `tech_governance/`: technical addendums that explain implementation models
+- `tech_governance/`: civic technology addendums (digital infrastructure,
+  decision protocols, smart contracts, cryptography, interoperability)
 - `proposals/`: future proposals, experiments, and structured policy drafts
 - `templates/`: canonical templates for new submissions
 - `docs/governance/`: constitutional and bylaw authority
@@ -16,7 +17,9 @@ AI agents such as Codex, Claude, and Gemini.
 ## Where To Place New Work
 
 - Add new manifesto content by editing the relevant file in `manifesto/`.
-- Add digital-democracy implementation detail in `tech_governance/`.
+- Add civic technology implementation detail in `tech_governance/`. Do not
+  introduce tokenomics, cryptocurrency, or blockchain governance concepts —
+  see `docs/adr/0008-remove-crypto-governance.md`.
 - Add new policy proposals in `proposals/` using
   `templates/proposal_template.md`.
 - Add institutional rules, ratification rules, or authority changes in

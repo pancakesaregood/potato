@@ -53,3 +53,6 @@ how policy and governance are processed.
 | [0003](0003-ci-cd-governance-model.md) | CI/CD Governance Model | Accepted |
 | [0004](0004-ai-agent-collaboration.md) | AI Agent Collaboration | Accepted |
 | [0005](0005-digital-democracy-architecture.md) | Digital Democracy Architecture | Accepted |
+| [0006](0006-charter-compliance-validation.md) | Charter Compliance Validation | Accepted |
+| [0007](0007-open-policy-development.md) | Open Policy Development | Accepted |
+| [0008](0008-remove-crypto-governance.md) | Remove Cryptocurrency Governance | Accepted |
