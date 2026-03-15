@@ -13,11 +13,15 @@ concrete for a particular community.
 
 ```
 core/
+├── governance_kernel.md    foundational primitives and minimum rules (start here)
 ├── manifesto_template/     universal article structure and guidance
 ├── governance_protocol/    how governance processes work
 ├── proposal_system/        how proposals are submitted and reviewed
 └── governance_cycles/      how policy evolves through iterative cycles
 ```
+
+`governance_kernel.md` is the root document. All other `core/` files
+elaborate on the primitives and rules it defines.
 
 ## How core relates to instances
 

@@ -8,7 +8,7 @@ related to token-based incentives and distributed-ledger governance, which
 were removed in favour of infrastructure that does not require cryptocurrency
 knowledge or holdings to participate.
 
-The goal is infrastructure that any Canadian resident can use to engage with
+The goal is infrastructure that any community member can use to engage with
 policy, regardless of technical background or financial resources.
 
 ## Design Principles
@@ -29,7 +29,7 @@ policy, regardless of technical background or financial resources.
 
 - Provide a web interface for browsing, endorsing, and commenting on policy
   proposals, backed by the Git repository as the canonical record.
-- Support bilingual access (English and French) at a minimum, with
+- Support multilingual access appropriate to the instance's community, with
   accessibility compliance to WCAG 2.1 AA.
 - Allow members to track the status of proposals they have submitted or
   endorsed through a persistent, authenticated dashboard.
