@@ -7,50 +7,105 @@
 | Ratifying body | Founding National Convention |
 | Last updated | 2026-03-15 |
 
+---
+
 ## Preamble
 
-The Peoples Potato Party of Canada exists to advance democratic participation,
-regional balance, practical public policy, and accountable political organizing.
-It is built on the idea that political parties should be member-driven,
-transparent in structure, fair across regions, and open to continuous renewal.
+We, the members of the Peoples Potato Party of Canada, united in the conviction
+that democratic life in this country must be renewed from the ground up, do
+hereby establish this Constitution as the supreme governing instrument of the
+Party.
 
-This constitution establishes the party's governing institutions and delegates
-operating details to modular bylaws so rules can be improved without rewriting
-the entire constitutional order.
+We hold that political power belongs to the people who choose to exercise it —
+not to leaders alone, not to insiders, and not to institutions that have
+forgotten whose interests they exist to serve. We hold that policy made in the
+open is policy made honestly. We hold that a party which cannot govern itself
+with fairness and accountability has no business asking to govern the country.
+
+We are guided by the following founding commitments:
+
+That the Party shall be driven by its members and answerable to them in all
+things.
+
+That every region of Canada — its provinces and territories, its cities and
+its remote communities, its many peoples and languages — shall have a genuine
+voice in Party decisions.
+
+That participation in the Party shall never be conditioned on wealth, social
+standing, or access to those in power.
+
+That the Party shall conduct its affairs with transparency, protect the rights
+of its members, and subject itself to the same scrutiny it demands of others.
+
+That this Constitution, once ratified, shall bind every body and every officer
+of the Party equally, without exception.
+
+In this spirit, we establish the institutions, rights, and obligations set
+forth below.
+
+---
 
 ## Article 1: Name, Mission, and Principles
 
 ### 1.1 Name
 
-The name of the party is the **Peoples Potato Party of Canada**, hereafter "the
-Party."
+The name of the Party is the **Peoples Potato Party of Canada**, hereinafter
+referred to as "the Party."
 
 ### 1.2 Mission
 
 The Party shall organize Canadians around democratic, evidence-informed, and
-member-led political action at the federal level.
+member-led political action at the federal level. It exists not merely to
+contest elections but to demonstrate, through its own conduct, that political
+institutions can be transparent, participatory, and worthy of public trust.
 
-### 1.3 Principles
+### 1.3 Governing Principles
 
-The Party is governed by the following principles:
+The Party shall be governed at all times in accordance with the following
+principles:
 
-- member sovereignty within constitutional limits
-- regional inclusion across all provinces and territories
-- respect for official languages and accessible participation
-- equity, anti-discrimination, and procedural fairness
-- financial integrity and legal compliance
-- transparent policy formation and accountable leadership
+**Member Sovereignty.** The ultimate authority of the Party resides in its
+members, exercised through the processes and institutions established by this
+Constitution.
 
-## Article 2: Authority and Interpretation
+**Regional Equity.** No province, territory, or region shall be structurally
+disadvantaged in Party deliberations. The Party shall actively seek to include
+voices from all parts of Canada.
 
-### 2.1 Constitutional Supremacy
+**Language and Accessibility.** The Party shall respect Canada's official
+languages and shall take concrete measures to ensure that participation is
+accessible to members regardless of language, disability, geography, or
+economic circumstance.
 
-This constitution is the supreme governing document of the Party. All bylaws,
-policies, directives, and committee rules must be consistent with it.
+**Equity and Non-Discrimination.** The Party shall not discriminate on any
+ground prohibited by Canadian law, shall actively work to remove barriers to
+full participation, and shall apply procedural fairness to every member without
+distinction.
+
+**Financial Integrity.** The Party shall manage its resources with honesty,
+transparency, and strict compliance with the law.
+
+**Accountable Leadership.** Those who hold authority within the Party hold it
+in trust for the membership. They shall exercise that authority transparently
+and remain answerable for how they use it.
+
+---
+
+## Article 2: Constitutional Supremacy and Interpretation
+
+### 2.1 Supremacy of This Constitution
+
+This Constitution is the supreme governing instrument of the Party. All bylaws,
+policies, resolutions, directives, and rules of any body or officer of the
+Party must be consistent with it. Any provision of a lower-order document that
+conflicts with this Constitution is, to the extent of the conflict, of no
+force or effect.
 
 ### 2.2 Modular Governance
 
-The Party's operating rules are set out in the following bylaws:
+Operational rules that require frequent revision or local adaptation are set
+out in the following bylaws, which form part of the governing order of the
+Party but are subordinate to this Constitution:
 
 - [Membership Bylaw](bylaws/membership.md)
 - [Riding Associations Bylaw](bylaws/riding-associations.md)
@@ -59,242 +114,425 @@ The Party's operating rules are set out in the following bylaws:
 - [Leadership Selection Bylaw](bylaws/leadership-selection.md)
 - [Policy Development Bylaw](bylaws/policy-development.md)
 
-### 2.3 Conflicts
+### 2.3 Resolution of Conflicts
 
-If a lower-order document conflicts with a higher-order document, the higher
-order prevails and the lower-order text shall be read as narrowly as possible
-until corrected.
+Where a conflict exists between a bylaw and this Constitution, this
+Constitution prevails. Where a conflict exists between a bylaw and a
+resolution of the National Convention, the Convention resolution prevails
+unless the bylaw was adopted at the same or a later Convention. In all cases
+of interpretive doubt, the interpretation that better advances the principles
+set out in Article 1.3 shall be preferred.
+
+### 2.4 Good Faith
+
+All bodies and officers of the Party shall exercise their powers and carry
+out their duties in good faith and in a manner consistent with the purposes
+of this Constitution.
+
+---
 
 ## Article 3: Membership
 
-### 3.1 Membership Base
+### 3.1 Foundation of the Party
 
-The Party is composed of Members in Good Standing as defined in the
-[Membership Bylaw](bylaws/membership.md).
+The Party is composed of its Members in Good Standing. Without them, no
+institution of the Party has democratic legitimacy. Their rights, as
+established in this Article, shall not be curtailed by bylaw, resolution,
+or executive action.
 
-### 3.2 Core Member Rights
+The qualifications for membership and the conditions of good standing are set
+out in the [Membership Bylaw](bylaws/membership.md).
 
-Subject to reasonable eligibility windows set by bylaw, each Member in Good
-Standing has the right to:
+### 3.2 Rights of Members
 
-- participate in local and national meetings
-- vote in Party processes for which the member is eligible
-- seek Party office or delegate status
-- submit policy or governance proposals
-- receive notice of major internal votes
-- obtain procedural fairness in disciplinary matters
+Every Member in Good Standing shall have the right to:
 
-### 3.3 Member Duties
+**(a)** participate in meetings of the Party at the local, regional, and
+national level;
 
-Members shall uphold this constitution, comply with applicable law, and avoid
-conduct that constitutes harassment, discrimination, fraud, deliberate
-misrepresentation of Party positions, or intentional interference with the
-Party's democratic processes or the rights of other members.
+**(b)** vote in all Party processes for which the member meets the eligibility
+requirements established by bylaw;
 
-Good-faith criticism of Party leadership, policy positions, or internal
-decisions — including vigorous public dissent — is not a breach of this duty.
+**(c)** seek election or appointment to any Party office for which the member
+is otherwise qualified;
+
+**(d)** stand for election as a delegate to the National Convention or any
+other deliberative body of the Party;
+
+**(e)** submit policy proposals and governance proposals through the processes
+established by bylaw;
+
+**(f)** receive timely notice of all major votes, conventions, and decisions
+that affect the rights or interests of members generally;
+
+**(g)** procedural fairness in any disciplinary or adverse proceeding,
+including notice of allegations, a meaningful opportunity to respond, and
+access to an appeal process.
+
+No bylaw or resolution may extinguish or substantially curtail any right
+enumerated in this section without amendment to this Constitution.
+
+### 3.3 Duties of Members
+
+Every member shall uphold this Constitution and the governing instruments of
+the Party, comply with applicable law, and refrain from conduct that
+constitutes harassment, discrimination, fraud, deliberate misrepresentation
+of Party positions, or intentional interference with the democratic processes
+of the Party or the rights of fellow members.
+
+No provision of this section shall be construed to prohibit good-faith
+criticism of Party leadership, policy positions, or internal decisions.
+Vigorous public dissent, honestly expressed, is a right of membership, not
+a breach of duty.
+
+---
 
 ## Article 4: Institutions of the Party
 
-### 4.1 Constituent Bodies
+### 4.1 Principal Institutions
 
-The Party's principal institutions are:
+The following institutions are hereby established as the governing bodies of
+the Party:
 
-- the National Convention
-- the National Council
-- recognized Riding Associations
-- the Leader and national officers
-- the Parliamentary Caucus
-- recognized commissions, circles, or caucuses created by bylaw
+**(a)** the National Convention;
 
-### 4.2 Subsidiarity
+**(b)** the National Council;
 
-Authority should be exercised at the most local practical level, except where
-national consistency, compliance, or fairness requires national rules.
+**(c)** recognized Riding Associations;
 
-## Article 5: National Convention
+**(d)** the Leader and national officers;
 
-### 5.1 Supreme Deliberative Authority
+**(e)** the Parliamentary Caucus;
 
-The National Convention is the Party's highest deliberative body.
+**(f)** such commissions, circles, caucuses, and advisory bodies as may be
+created and recognized pursuant to this Constitution and the bylaws.
 
-### 5.2 Core Powers
+### 4.2 Principle of Subsidiarity
 
-The National Convention may:
+Authority within the Party shall be exercised at the most local level at
+which it can effectively be exercised, except where national consistency,
+legal compliance, or the equal treatment of members across regions requires
+that authority be exercised at the national level. National bodies shall not
+assume powers properly belonging to local bodies except where this Constitution
+or a bylaw expressly requires it.
 
-- amend this constitution
-- adopt or amend Party bylaws
-- elect national officers
-- review the leadership
-- adopt policy directions and resolutions
-- receive audited financial and organizational reports
-- direct the National Council on strategic matters
+---
 
-### 5.3 Frequency
+## Article 5: The National Convention
 
-A regular National Convention shall be held every two years, subject to the
-[Convention System Bylaw](bylaws/conventions.md).
+### 5.1 Sovereign Deliberative Authority
 
-## Article 6: National Council
+The National Convention is the highest deliberative authority of the Party.
+Its decisions, made in accordance with this Constitution and the Convention
+System Bylaw, shall be binding upon all other bodies and officers of the Party.
 
-### 6.1 Role
+### 5.2 Powers of the National Convention
 
-The National Council is the governing authority between National Conventions.
+The National Convention shall have the power to:
 
-### 6.2 Duties
+**(a)** amend this Constitution in accordance with Article 13;
+
+**(b)** adopt, amend, and repeal Party bylaws;
+
+**(c)** elect national officers;
+
+**(d)** review and, where it determines appropriate, withdraw confidence in
+the leadership;
+
+**(e)** adopt policy resolutions and establish the Party's policy directions;
+
+**(f)** receive, examine, and act upon audited financial and organizational
+reports;
+
+**(g)** issue binding directions to the National Council on matters of
+Party strategy and governance.
+
+### 5.3 Regularity of Conventions
+
+A regular National Convention shall be held not less than once every two
+years. The convening, conduct, and delegate composition of the National
+Convention shall be governed by the [Convention System Bylaw](bylaws/conventions.md).
+
+---
+
+## Article 6: The National Council
+
+### 6.1 Governing Authority Between Conventions
+
+The National Council is the governing authority of the Party between National
+Conventions. It is accountable to the National Convention and shall exercise
+its authority in a manner consistent with Convention decisions and the
+principles of this Constitution.
+
+### 6.2 Duties of the National Council
 
 The National Council shall:
 
-- implement convention decisions
-- supervise national administration and finances
-- recognize and support Riding Associations
-- ensure compliance with legal and electoral obligations
-- convene conventions, leadership votes, and national consultations
-- publish regular reports to members
+**(a)** implement and give effect to decisions of the National Convention;
 
-### 6.3 Limits
+**(b)** supervise the national administration and finances of the Party;
 
-The National Council may not override the constitution and may only make
-provisional bylaw orders in the limited manner set out in Article 13.
+**(c)** recognize, support, and where required by bylaw, decertify Riding
+Associations;
+
+**(d)** ensure the Party's compliance with all federal electoral, financial,
+and legal obligations;
+
+**(e)** convene National Conventions, leadership selection processes, and
+national member consultations in accordance with this Constitution and the
+bylaws;
+
+**(f)** publish regular reports to the membership on the state of the Party's
+finances, operations, and governance.
+
+### 6.3 Limits on Council Authority
+
+The National Council shall have no power to override or derogate from this
+Constitution. It shall make provisional bylaw orders only in the limited
+circumstances and by the procedures set out in Article 13.3. No resolution
+of the National Council shall have the effect of curtailing the rights of
+members established in Article 3.2.
+
+---
 
 ## Article 7: Riding Associations
 
-### 7.1 Local Units
+### 7.1 Exclusive Recognition
 
-There shall be no more than one recognized Riding Association for each federal
-electoral district, unless transitional arrangements are required because of
-boundary redistribution.
+There shall be not more than one recognized Riding Association for each
+federal electoral district. Where boundary redistribution creates transitional
+ambiguity, the National Council shall establish interim arrangements consistent
+with this principle.
 
-### 7.2 Local Democratic Role
+### 7.2 Role of Riding Associations
 
-Riding Associations are the Party's primary local organizing units. They recruit
-members, deliberate on policy, nominate delegates, and support candidate
-selection under national rules.
+Riding Associations are the primary local organizing units of the Party.
+They shall recruit and engage members, deliberate on policy questions, nominate
+delegates to national bodies, and support the candidate selection process in
+accordance with national rules. They are the first point of contact between
+the Party and the communities it seeks to serve.
 
 ### 7.3 Local Autonomy
 
-Riding Associations may adopt local practices consistent with this constitution,
-Party bylaws, and legal compliance standards.
+A Riding Association may adopt local rules and practices suited to its
+community, provided those rules are consistent with this Constitution, the
+bylaws, and all applicable legal obligations. The Party shall not impose
+uniformity on local practices where local variation is lawful and serves the
+interests of members.
 
-## Article 8: Leader and National Officers
+---
 
-### 8.1 Leader
+## Article 8: The Leader and National Officers
 
-The Leader is the Party's chief public representative and principal political
-spokesperson.
+### 8.1 The Leader
 
-### 8.2 Selection
+The Leader is the principal public representative and chief political
+spokesperson of the Party. The Leader shall carry out that role in a manner
+consistent with this Constitution, the decisions of the National Convention,
+and the direction of the National Council on matters within its authority.
 
-The Leader shall be selected in accordance with the
-[Leadership Selection Bylaw](bylaws/leadership-selection.md).
+### 8.2 Selection and Accountability of the Leader
+
+The Leader shall be selected through a process that is open, transparent, and
+fair to all eligible candidates, as set out in the
+[Leadership Selection Bylaw](bylaws/leadership-selection.md). The Leader
+remains accountable to the membership and may be subject to a leadership
+review as provided in that Bylaw and Article 5.2(d).
 
 ### 8.3 National Officers
 
-National officers are elected to steward the Party's organization and are
-accountable to the National Convention and National Council as set out in the
-[National Council Bylaw](bylaws/national-council.md).
+National officers shall be elected by or accountable to the National Convention
+and shall discharge their responsibilities as stewards of the Party's
+organization in accordance with the [National Council Bylaw](bylaws/national-council.md).
+No national officer exercises authority independently of this Constitution and
+the governing instruments made under it.
+
+---
 
 ## Article 9: Policy Development
 
-### 9.1 Member-Driven Process
+### 9.1 Policy as a Member-Driven Process
 
-Party policy shall be developed through a structured process that begins with
-members and local bodies and culminates in national consideration.
+The development of Party policy shall proceed from the members upward. Ideas
+shall originate with members, local bodies, and commissions; be deliberated
+at each level; and reach national determination through the processes
+established by this Constitution and the [Policy Development Bylaw](bylaws/policy-development.md).
 
-### 9.2 Policy Authority
+### 9.2 Official Policy
 
-No policy statement shall be treated as an official Party policy unless adopted
-through the [Policy Development Bylaw](bylaws/policy-development.md), the
-National Convention, or a duly authorized interim mechanism recognized by that
-bylaw.
+No statement, platform, resolution, or position shall be treated as official
+Party policy unless it has been adopted through the Policy Development Bylaw,
+ratified by the National Convention, or produced by a duly authorized interim
+mechanism recognized by that Bylaw. Statements by individual officers or
+members, however prominent, do not constitute Party policy unless adopted
+through these processes.
 
-### 9.3 Platform Accountability
+### 9.3 Electoral Platform Accountability
 
-Election platforms should substantially reflect adopted Party policy. Material
-departures made for electoral, fiscal, legal, or emergent reasons shall be
-reported to members after the election campaign.
+The Party's election platform shall substantially reflect its adopted policy.
+Where material departures from adopted policy are made for electoral, fiscal,
+legal, or emergent reasons, the National Council shall prepare a written
+account of those departures and present it to the membership after the
+conclusion of the election campaign.
+
+---
 
 ## Article 10: Equity, Language, and Accessibility
 
-### 10.1 Equal Participation
+### 10.1 Commitment to Equal Participation
 
-The Party shall take reasonable measures to ensure equitable participation by
-members across geography, language, age, disability, and historically excluded
-communities.
+The Party shall take active and reasonable measures to ensure that all members
+are able to participate fully in its processes, and shall not tolerate
+structural barriers that systematically exclude members on the basis of
+geography, language, age, disability, economic circumstance, or membership
+in a historically marginalized community.
 
 ### 10.2 Official Languages
 
-National notices, governing texts, and major votes should be made available in
-English and French as organizational capacity permits.
+All national notices, governing texts, ballots, and major votes shall be made
+available in both English and French. The Party shall build its capacity to
+meet this obligation as a matter of organizational priority, and shall not
+treat resource constraints as a permanent excuse for falling short of it.
 
-### 10.3 Accessible Participation
+### 10.3 Accessibility
 
-The Party shall support hybrid participation, accessible meeting practices, and
-clear complaint procedures wherever feasible.
+The Party shall support hybrid participation models, accessible meeting
+practices, and clear complaint procedures that allow members with disabilities
+or other accessibility needs to participate on equal terms. Where in-person
+participation is required, reasonable accommodation shall be provided.
 
-## Article 11: Finance and Compliance
+---
 
-### 11.1 Legal Compliance
+## Article 11: Finance and Legal Compliance
 
-All Party bodies shall comply with federal electoral law, financial controls,
-privacy obligations, and internal reporting requirements.
+### 11.1 Obligation of Legal Compliance
+
+Every body and every officer of the Party shall at all times comply with the
+Canada Elections Act and all other applicable federal laws, the Party's
+financial controls, privacy obligations, and the internal reporting
+requirements established by bylaw. Legal compliance is a constitutional duty,
+not merely an administrative aspiration.
 
 ### 11.2 Financial Stewardship
 
-The Party's financial administration shall be supervised by the National Council
-through the Treasurer, Chief Agent, and any audit mechanisms established by
-bylaw.
+The financial administration of the Party shall be supervised by the National
+Council acting through the Treasurer, the Chief Agent, and such audit and
+oversight mechanisms as are established by bylaw. Financial records shall be
+maintained accurately, reported transparently, and made available to members
+in accordance with the law.
+
+---
 
 ## Article 12: Discipline and Procedural Fairness
 
-### 12.1 Fair Process
+### 12.1 Right to a Fair Process
 
 No member, officer, candidate, or Riding Association shall be suspended,
-decertified, or sanctioned without notice of the case, a reasonable opportunity
-to respond, and an appeal path defined by bylaw.
+sanctioned, decertified, or subjected to any adverse determination without:
 
-### 12.2 Proportionate Measures
+**(a)** written notice of the case against them, provided in sufficient detail
+to allow a meaningful response;
 
-Corrective education, mediation, and support should be preferred over punitive
-measures unless the conduct involves harassment, discrimination, fraud, or a
-serious and demonstrable threat to member safety or legal compliance.
+**(b)** a reasonable and genuine opportunity to respond before any determination
+is made; and
 
-## Article 13: Amendments and Review
+**(c)** access to an appeal process, the terms of which shall be established
+by bylaw.
 
-### 13.1 Constitutional Amendments
+These rights may not be waived by the Party. Any proceeding that fails to
+observe them is without constitutional force.
 
-This constitution may be amended by a two-thirds vote of accredited convention
-delegates, provided the proposed amendment text was circulated at least sixty
-days before the vote unless a declared emergency convention permits a shorter
-notice period by the same threshold.
+### 12.2 Proportionality
 
-### 13.2 Bylaw Amendments
+Discipline shall be proportionate to the conduct in question. Corrective
+education, mediation, and restorative processes shall be preferred over
+punitive measures unless the conduct involves harassment, discrimination,
+fraud, or a serious and demonstrable threat to the safety of members or the
+legal standing of the Party.
 
-Party bylaws may be amended by a sixty percent vote of accredited convention
-delegates.
+---
+
+## Article 13: Amendments, Provisional Orders, and Review
+
+### 13.1 Amendment of This Constitution
+
+This Constitution may be amended only by a vote of not less than two-thirds
+of accredited delegates at a National Convention, provided that:
+
+**(a)** the full text of the proposed amendment has been circulated to all
+members at least sixty days before the vote; and
+
+**(b)** no amendment to Article 3.2 (Member Rights) shall take effect unless
+it has been approved by a separate direct vote of the full membership, in
+addition to the delegate vote required under this section.
+
+Where a declared emergency convention is convened pursuant to the Convention
+System Bylaw, the sixty-day notice period may be reduced by resolution of
+not less than two-thirds of accredited delegates at that convention.
+
+### 13.2 Amendment of Bylaws
+
+The bylaws of the Party may be amended by a vote of not less than sixty
+percent of accredited delegates at a National Convention, subject to any
+additional requirements established in the bylaw itself.
 
 ### 13.3 Provisional Bylaw Orders
 
-Between conventions, the National Council may adopt provisional bylaw orders by
-a two-thirds vote if immediate action is required for legal compliance,
-financial control, electoral administration, or operational continuity. A
-provisional order expires at the close of the next National Convention unless
-ratified there.
+Between National Conventions, the National Council may, by a vote of not
+less than two-thirds of its members, adopt a provisional bylaw order where
+immediate action is required to maintain legal compliance, financial control,
+electoral administration, or operational continuity.
 
-### 13.4 Periodic Review
+A provisional bylaw order shall:
 
-At least once every four years, the National Council shall commission a public
-review of this constitution and the Party's bylaws and present the results to
-the next National Convention.
+**(a)** state the circumstances that necessitate it;
 
-### 13.5 Dissolution or Merger
+**(b)** be published to all members within seven days of adoption;
 
-The Party may dissolve, merge, or transfer substantially all governing
-authority only by a three-quarters vote of convention delegates and any further
-member approval required by law or a convention resolution.
+**(c)** expire at the close of the next National Convention unless ratified
+by the delegates in accordance with Article 13.2; and
+
+**(d)** not be used to curtail the rights of members established in Article 3.2
+or to concentrate power in any person or body in a manner inconsistent with
+this Constitution.
+
+### 13.4 Periodic Constitutional Review
+
+Not less than once every four years, the National Council shall commission a
+public review of this Constitution and all Party bylaws. The terms of
+reference, the process, and the findings of the review shall be made available
+to all members. A summary of the review and any recommended amendments shall
+be presented to the next National Convention.
+
+### 13.5 Dissolution and Merger
+
+The Party may be dissolved, merged with another political organization, or
+have substantially all of its governing authority transferred, only upon:
+
+**(a)** a vote of not less than three-quarters of accredited delegates at a
+National Convention convened for that purpose; and
+
+**(b)** such further approval of the membership by direct vote as the
+Convention may require or as is required by law.
+
+No dissolution or merger shall be effected in a manner that diverts the
+Party's assets to the private benefit of any person. Upon dissolution, assets
+remaining after the discharge of all legal obligations shall be distributed
+to a charitable or civic purpose consistent with the principles of this
+Constitution, as directed by the final National Convention.
+
+---
 
 ## Article 14: Coming Into Force
 
-This constitution takes effect upon ratification by the Founding National
-Convention and remains in force until amended or replaced according to Article
-13.
+This Constitution shall come into force upon ratification by the Founding
+National Convention of the Peoples Potato Party of Canada, and shall remain
+in force until amended or replaced in accordance with Article 13.
+
+From the moment of ratification, every institution, officer, member, and body
+of the Party is bound by it.
+
+---
+
+*Ratified by the Founding National Convention of the Peoples Potato Party
+of Canada.*
