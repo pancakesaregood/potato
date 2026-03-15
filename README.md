@@ -33,7 +33,7 @@ flowchart LR
 | Understand how the system works | [docs/how_to_participate.md](docs/how_to_participate.md) |
 | Build a new governance instance | [INSTANCE_GUIDE.md](INSTANCE_GUIDE.md) |
 | Propose a policy idea | [Open a Policy Proposal issue](../../issues/new/choose) |
-| Try a starter experiment | [experiments/](experiments/) |
+| Try a starter experiment | [docs/experiments/](docs/experiments/) |
 | Read the Canada manifesto | [instances/canada/manifesto/](instances/canada/manifesto/) |
 | Understand the governance rules | [docs/governance/](docs/governance/) |
 | See where the project is going | [ROADMAP.md](ROADMAP.md) |
@@ -90,8 +90,8 @@ instances/
     governance/         → see docs/governance/ (canonical location)
 
 civic_infrastructure/   universal civic technology addendums
-experiments/            open policy questions for new contributors
 docs/
+  experiments/          open policy questions and interaction experiments
   governance/           Canada instance constitution and bylaws
   adr/                  Architecture Decision Records
   how_to_participate.md
@@ -110,15 +110,15 @@ ROADMAP.md              development phases
 
 ## Try the experiments
 
-Not ready to propose a full policy change? Start in `experiments/`. These
+Not ready to propose a full policy change? Start in `docs/experiments/`. These
 are open questions with structured debate spaces — lower stakes than amending
 the manifesto, and designed for first-time contributors.
 
-- [Digital Referendums](experiments/digital_referendums.md) — should
+- [Digital Referendums](docs/experiments/digital_referendums.md) — should
   communities have citizen-initiated referendums?
-- [Housing Policy](experiments/housing_policy_experiment.md) — what
+- [Housing Policy](docs/experiments/housing_policy_experiment.md) — what
   combination of measures reduces unaffordability without displacement?
-- [Energy Strategy](experiments/energy_strategy_experiment.md) — how should
+- [Energy Strategy](docs/experiments/energy_strategy_experiment.md) — how should
   a community manage an energy transition fairly?
 
 ---

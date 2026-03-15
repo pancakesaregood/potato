@@ -10,7 +10,7 @@ The format is based on Keep a Changelog, adapted for governance documents.
 
 - Participation layer: `docs/how_to_participate.md`, `docs/governance_roles.md`,
   `ROADMAP.md`.
-- Three starter experiments in `experiments/`: digital referendums, housing
+- Three starter experiments in `docs/experiments/`: digital referendums, housing
   policy, energy strategy.
 - Three new GitHub Issue templates: `policy_proposal.yml`, `policy_question.yml`,
   `governance_discussion.yml`.

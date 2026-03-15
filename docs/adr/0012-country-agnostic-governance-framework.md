@@ -152,10 +152,12 @@ The guide will use the Canada instance as the worked example throughout.
 
 ### Neutral / Watch Items
 
-- The `experiments/` files added in ADR-0010 (`experiments/digital_referendums.md`,
-  `experiments/housing_policy_experiment.md`, `experiments/energy_strategy_experiment.md`)
-  are Canada-specific and should migrate to `instances/canada/experiments/`
-  in a future commit for consistency with this structure.
+- The experiment files (`docs/experiments/digital_referendums.md`,
+  `docs/experiments/housing_policy_experiment.md`,
+  `docs/experiments/energy_strategy_experiment.md`) are Canada-specific
+  but currently live alongside framework-level experiments in
+  `docs/experiments/`. If the volume of Canada-specific experiments
+  grows, a migration to `instances/canada/experiments/` may be warranted.
 - The `core/` directory contains structural templates and protocols, but
   not executable tooling. The CI scripts in `scripts/` are also
   effectively framework-level infrastructure and would logically sit in
@@ -234,8 +236,8 @@ This ADR should be revisited if:
   `instances/canada/governance/`, at which point the structural
   inconsistency noted above is resolved and this ADR should be updated
   to reflect the completed migration.
-- The `experiments/` files are migrated to `instances/canada/experiments/`,
-  completing the Canada instance encapsulation.
+- Canada-specific experiments in `docs/experiments/` are migrated to
+  `instances/canada/experiments/`, completing the Canada instance encapsulation.
 - A second community creates an instance and the `INSTANCE_GUIDE.md`
   proves incomplete or misleading — the guide should be updated based on
   real instantiation experience, not just the Canada reference case.

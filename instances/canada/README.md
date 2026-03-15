@@ -67,9 +67,9 @@ Active policy proposals: `proposals/`
 
 Open policy experiments (structured debate spaces for new contributors):
 
-- [Digital Referendums](../../experiments/digital_referendums.md)
-- [Housing Policy](../../experiments/housing_policy_experiment.md)
-- [Energy Strategy](../../experiments/energy_strategy_experiment.md)
+- [Digital Referendums](../../docs/experiments/digital_referendums.md)
+- [Housing Policy](../../docs/experiments/housing_policy_experiment.md)
+- [Energy Strategy](../../docs/experiments/energy_strategy_experiment.md)
 
 ## Using this instance as a reference
 

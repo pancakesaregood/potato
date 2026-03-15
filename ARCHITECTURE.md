@@ -64,7 +64,7 @@ flowchart LR
         A[instances/canada/manifesto/\narticles]
         B[proposals/\ndrafts]
         C[civic_infrastructure/\naddendums]
-        D[experiments/\nstarter debates]
+        D[docs/experiments/\nstarter debates]
     end
 
     subgraph Validation
@@ -230,7 +230,7 @@ flowchart LR
     D --> E[docs/governance/]
     E --> F[ratified governance state\non main branch]
     B --> G[civic_infrastructure/]
-    H[experiments/] --> B
+    H[docs/experiments/] --> B
     I[docs/adr/] --> E
 ```
 

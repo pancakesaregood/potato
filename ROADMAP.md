@@ -40,7 +40,7 @@ without needing to understand its full architecture first.
 
 Goals:
 - [ ] Onboarding documentation that works for non-technical contributors
-- [ ] Starter experiments in `experiments/` to lower the first-contribution barrier
+- [ ] Starter experiments in `docs/experiments/` to lower the first-contribution barrier
 - [ ] Governance roles defined and documented
 - [ ] Issue templates that guide contributors toward useful submissions
 - [ ] Updated README that communicates the project within 10 seconds

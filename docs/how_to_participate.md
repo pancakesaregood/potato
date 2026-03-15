@@ -209,7 +209,7 @@ If you are stuck, open a **Governance Discussion** issue and describe what you
 are trying to do. Other contributors and maintainers will help you find the
 right path.
 
-The `experiments/` folder contains three starter experiments designed for
+The `docs/experiments/` folder contains starter experiments designed for
 new contributors. They are lower-stakes than manifesto articles — a good
 place to start if you want to try the contribution workflow before proposing
 a major change.

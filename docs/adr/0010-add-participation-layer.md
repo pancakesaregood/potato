@@ -5,7 +5,7 @@
 | Status | Accepted |
 | Date | 2026-03-15 |
 | Deciders | Repository maintainers |
-| Affected components | `docs/`, `experiments/`, `.github/ISSUE_TEMPLATE/`, `ROADMAP.md`, `README.md` |
+| Affected components | `docs/`, `docs/experiments/`, `.github/ISSUE_TEMPLATE/`, `ROADMAP.md`, `README.md` |
 | Implemented in | commit `8dda53d` |
 
 ---
@@ -54,9 +54,9 @@ We will add the following participation infrastructure in a single commit:
   complete and Phase 2 (community activation) as the active phase.
 
 **Starter experiments:**
-- `experiments/digital_referendums.md`
-- `experiments/housing_policy_experiment.md`
-- `experiments/energy_strategy_experiment.md`
+- `docs/experiments/digital_referendums.md`
+- `docs/experiments/housing_policy_experiment.md`
+- `docs/experiments/energy_strategy_experiment.md`
 
 Experiments are structured debate spaces: they define a contested policy
 question, present the genuine tradeoffs without taking a position, and
@@ -114,9 +114,9 @@ for first-time contributors.
   every interaction") is deliberately qualitative. A quantitative version
   should be agreed before Phase 2 is declared complete.
 - The three experiment topics (referendums, housing, energy) are
-  Canada-specific. After the framework refactor (ADR-0012), experiments
-  should be placed within instance directories. The existing files should
-  migrate to `instances/canada/experiments/` in a future commit.
+  Canada-specific but live in `docs/experiments/` alongside framework-level
+  experiments. If Canada-specific experiments grow substantially, a future
+  migration to `instances/canada/experiments/` may be warranted.
 
 ---
 
@@ -167,6 +167,7 @@ This ADR should be revisited if:
 - The governance roles framework proves unworkable in practice (role
   advancement requests are ignored, criteria are disputed, or the process
   creates conflict rather than clarity).
-- The experiment files are not migrated to `instances/canada/experiments/`
-  after the framework refactor, at which point the inconsistency should be
-  resolved.
+- The experiment files grow to a scale where separating Canada-specific
+  experiments from framework-level ones becomes necessary, at which point
+  a split into `instances/canada/experiments/` and `docs/experiments/`
+  should be considered.
