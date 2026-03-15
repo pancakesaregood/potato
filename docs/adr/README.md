@@ -56,3 +56,7 @@ how policy and governance are processed.
 | [0006](0006-charter-compliance-validation.md) | Charter Compliance Validation | Accepted |
 | [0007](0007-open-policy-development.md) | Open Policy Development | Accepted |
 | [0008](0008-remove-crypto-governance.md) | Remove Cryptocurrency Governance | Accepted |
+| [0009](0009-rename-tech-governance-to-civic-infrastructure.md) | Rename `tech_governance/` to `civic_infrastructure/` | Accepted |
+| [0010](0010-add-participation-layer.md) | Add Participation Layer and Community Activation Infrastructure | Accepted |
+| [0011](0011-manifesto-governance-concepts-and-constitutional-register.md) | Integrate Governance-as-Code into the Manifesto and Rewrite the Constitution in Constitutional Register | Accepted |
+| [0012](0012-country-agnostic-governance-framework.md) | Refactor into a Country-Agnostic Governance Framework | Accepted |
