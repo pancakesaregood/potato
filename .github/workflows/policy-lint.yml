@@ -1,0 +1,40 @@
+name: Policy Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  policy-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Markdown linter
+        run: npm install --global markdownlint-cli@0.39.0
+
+      - name: Validate Markdown formatting
+        run: markdownlint "**/*.md" --config .markdownlint.json
+
+      - name: Validate proposal template usage
+        run: python scripts/validate_proposals.py
+
+      - name: Charter compliance check placeholder
+        run: python scripts/charter_compliance_placeholder.py
+
+      - name: Policy consistency check
+        run: python scripts/policy_consistency_check.py
