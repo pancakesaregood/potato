@@ -4,7 +4,7 @@
 | --- | --- |
 | Status | Open for contribution |
 | Type | Policy design experiment |
-| Related manifesto article | `manifesto/article_05_housing_and_homelessness.md` |
+| Related manifesto article | `instances/canada/manifesto/article_05_housing_and_homelessness.md` |
 
 ---
 

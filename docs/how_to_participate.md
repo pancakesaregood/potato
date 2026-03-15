@@ -127,7 +127,7 @@ If you want to propose a change directly to a manifesto article or technical
 addendum — not just add a proposal document — you can edit the relevant file
 and open a PR against it.
 
-**Manifesto articles** are in `manifesto/`. Each article must keep its four
+**Manifesto articles** are in `instances/canada/manifesto/`. Each article must keep its four
 required headings:
 
 ```
@@ -168,7 +168,7 @@ practice" is a useful review comment.
 
 ## What the automated checks actually do
 
-The CI pipeline runs on every PR that touches `manifesto/`, `civic_infrastructure/`,
+The CI pipeline runs on every PR that touches `instances/`, `civic_infrastructure/`,
 `proposals/`, or `docs/governance/`.
 
 ```

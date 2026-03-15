@@ -7,7 +7,7 @@ authority still depends on the ratification path described in
 
 ## What Goes Where
 
-- `manifesto/`: one article per major policy theme
+- `instances/canada/manifesto/`: one article per major policy theme
 - `civic_infrastructure/`: digital democracy and implementation addendums
 - `proposals/`: new policy proposals and structured amendments
 - `templates/`: canonical drafting templates

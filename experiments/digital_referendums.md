@@ -4,7 +4,7 @@
 | --- | --- |
 | Status | Open for contribution |
 | Type | Governance design experiment |
-| Related manifesto article | `manifesto/article_02_digital_democracy.md` |
+| Related manifesto article | `instances/canada/manifesto/article_02_digital_democracy.md` |
 
 ---
 

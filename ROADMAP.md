@@ -17,7 +17,7 @@ party and does not make legal or electoral commitments.
 The foundational structure of a governance-as-code system is in place.
 
 Delivered:
-- [x] Manifesto articles (`manifesto/`)
+- [x] Manifesto articles (`instances/canada/manifesto/`)
 - [x] Governance constitution and bylaws (`docs/governance/`)
 - [x] Architecture Decision Records (`docs/adr/`)
 - [x] CI/CD governance pipeline (`.github/workflows/policy-lint.yml`)

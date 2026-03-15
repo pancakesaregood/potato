@@ -72,7 +72,7 @@ researched proposals or substantive reviews.
   not personally sponsoring
 
 **How to demonstrate qualification:**
-- At least three PRs merged into `manifesto/`, `civic_infrastructure/`, or
+- At least three PRs merged into `instances/canada/manifesto/`, `civic_infrastructure/`, or
   `proposals/` with substantive content
 - At least two substantive reviews of other contributors' proposals
 - No pattern of withdrawing without explanation after review begins

@@ -13,7 +13,7 @@ The path from a citizen's idea to a change in the canonical manifesto:
 flowchart TD
     A([Citizen has an idea]) --> B[GitHub Issue\nPolicy Proposal · Question · Governance]
     B --> C[Draft Proposal\nproposals/ using template]
-    C --> D[Pull Request opened\nagainst manifesto/ or docs/]
+    C --> D[Pull Request opened\nagainst instances/canada/manifesto/ or docs/]
 
     D --> E{CI Pipeline}
 
@@ -47,7 +47,7 @@ flowchart TD
     B[Bylaws\ndocs/governance/bylaws/] -->|inform| C
     C[Architecture Decision Records\ndocs/adr/] -->|explain design of| D
     D[Governance Documents\ncivic_infrastructure/ · ARCHITECTURE.md] -->|frame| E
-    E[Manifesto Articles\nmanifesto/] -->|express| F
+    E[Manifesto Articles\ninstances/canada/manifesto/] -->|express| F
     F[Proposals Under Review\nproposals/]
 ```
 
@@ -61,7 +61,7 @@ How files move through the system from authoring to ratified state:
 ```mermaid
 flowchart LR
     subgraph Authoring
-        A[manifesto/\narticles]
+        A[instances/canada/manifesto/\narticles]
         B[proposals/\ndrafts]
         C[civic_infrastructure/\naddendums]
         D[experiments/\nstarter debates]
@@ -179,7 +179,7 @@ Key functions:
 The governance platform is the authoring and decision environment. In the
 repository, it is expressed through:
 
-- `manifesto/` for policy articles
+- `instances/canada/manifesto/` for Canada policy articles (each instance has its own)
 - `civic_infrastructure/` for civic technology addendums (digital infrastructure,
   decision protocols, smart contract use cases, cryptographic security)
 - `proposals/` and `templates/` for change intake
@@ -224,7 +224,7 @@ Implementation priorities:
 
 ```mermaid
 flowchart LR
-    A[manifesto/] --> B[proposals/]
+    A[instances/canada/manifesto/] --> B[proposals/]
     B --> C[scripts/]
     C --> D[GitHub Actions]
     D --> E[docs/governance/]

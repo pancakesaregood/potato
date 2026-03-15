@@ -5,7 +5,7 @@ AI agents such as Codex, Claude, and Gemini.
 
 ## Repository Architecture
 
-- `manifesto/`: authoritative policy articles for the PPPC manifesto
+- `instances/canada/manifesto/`: authoritative policy articles for the PPPC manifesto
 - `civic_infrastructure/`: civic technology addendums (digital infrastructure,
   decision protocols, smart contracts, cryptography, interoperability)
 - `proposals/`: future proposals, experiments, and structured policy drafts
@@ -16,7 +16,7 @@ AI agents such as Codex, Claude, and Gemini.
 
 ## Where To Place New Work
 
-- Add new manifesto content by editing the relevant file in `manifesto/`.
+- Add new manifesto content by editing the relevant file in `instances/canada/manifesto/`.
 - Add civic technology implementation detail in `civic_infrastructure/`. Do not
   introduce tokenomics, cryptocurrency, or blockchain governance concepts —
   see `docs/adr/0008-remove-crypto-governance.md`.
