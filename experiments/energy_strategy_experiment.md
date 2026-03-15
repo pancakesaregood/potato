@@ -4,7 +4,7 @@
 | --- | --- |
 | Status | Open for contribution |
 | Type | Policy design experiment |
-| Related manifesto articles | `manifesto/article_06_environmental_responsibility.md`, `manifesto/article_10_climate_change.md`, `manifesto/article_17_resource_nationalization.md` |
+| Related manifesto articles | `manifesto/article_06_environmental_responsibility.md`, `manifesto/article_10_climate_change.md` |
 
 ---
 
