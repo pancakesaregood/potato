@@ -1,46 +1,36 @@
 import { getManifestoFiles, getFileContent, filenameToTitle } from './github.js';
 import { MANIFESTO_PATH } from './config.js';
 
-// CDN-delivered libraries: marked (markdown) + DOMPurify (XSS sanitisation).
-const MARKED_CDN  = 'https://cdn.jsdelivr.net/npm/marked@12/marked.min.js';
-const PURIFY_CDN  = 'https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js';
-
 const articleList    = document.getElementById('article-list');
 const articlePanel   = document.getElementById('article-panel');
 const articleWelcome = document.getElementById('article-welcome');
 const articleContent = document.getElementById('article-content');
 
-let markedLoaded  = false;
-let purifyLoaded  = false;
-
-// --- Load CDN scripts -------------------------------------------------------
-
-function loadScript(src) {
-  return new Promise((resolve, reject) => {
-    const s = document.createElement('script');
-    s.src = src; s.async = true;
-    s.onload = resolve; s.onerror = reject;
-    document.head.appendChild(s);
-  });
-}
+// Lazily-loaded rendering libraries (ES module imports from jsDelivr).
+let markedFn   = null;
+let purifyFn   = null;
 
 async function ensureRenderers() {
-  if (!markedLoaded)  { await loadScript(MARKED_CDN);  markedLoaded  = true; }
-  if (!purifyLoaded)  { await loadScript(PURIFY_CDN);  purifyLoaded  = true; }
+  if (!markedFn) {
+    const mod = await import('https://cdn.jsdelivr.net/npm/marked/+esm');
+    // marked exports: { marked, Marked, ... } — use the parse function directly.
+    markedFn = mod.marked ?? mod.default;
+  }
+  if (!purifyFn) {
+    const mod = await import('https://cdn.jsdelivr.net/npm/dompurify/+esm');
+    purifyFn = mod.default ?? mod.DOMPurify;
+  }
 }
 
 // --- Render article ---------------------------------------------------------
 
 async function loadArticle(filename) {
-  // Update URL hash for bookmarkability.
   history.replaceState(null, '', `#${filename}`);
 
-  // Mark active in list.
   document.querySelectorAll('.article-list a').forEach(a => {
     a.classList.toggle('active', a.dataset.article === filename);
   });
 
-  // Show loading state.
   articleWelcome.hidden = true;
   articleContent.hidden = false;
   articleContent.innerHTML = '<div class="state-loading"><div class="spinner"></div><p>Loading…</p></div>';
@@ -48,9 +38,8 @@ async function loadArticle(filename) {
 
   try {
     await ensureRenderers();
-    const path    = `${MANIFESTO_PATH}/${filename}`;
-    const raw     = await getFileContent(path);
-    const html    = window.DOMPurify.sanitize(window.marked.parse(raw));
+    const raw  = await getFileContent(`${MANIFESTO_PATH}/${filename}`);
+    const html = purifyFn.sanitize(markedFn.parse(raw));
 
     articleContent.innerHTML = `
       <div class="article-meta">
@@ -83,18 +72,14 @@ async function buildArticleList() {
     files.forEach(file => {
       const li = document.createElement('li');
       const a  = document.createElement('a');
-      a.href         = `#${file.name}`;
-      a.textContent  = filenameToTitle(file.name);
+      a.href            = `#${file.name}`;
+      a.textContent     = filenameToTitle(file.name);
       a.dataset.article = file.name;
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        loadArticle(file.name);
-      });
+      a.addEventListener('click', e => { e.preventDefault(); loadArticle(file.name); });
       li.appendChild(a);
       articleList.appendChild(li);
     });
 
-    // If there's a hash in the URL, load that article.
     const hash = window.location.hash.replace('#', '');
     if (hash && files.find(f => f.name === hash)) {
       loadArticle(hash);
@@ -108,12 +93,7 @@ async function buildArticleList() {
 
 const welcomeLink = document.querySelector('[data-article="why_the_potato.md"]');
 if (welcomeLink) {
-  welcomeLink.addEventListener('click', e => {
-    e.preventDefault();
-    loadArticle('why_the_potato.md');
-  });
+  welcomeLink.addEventListener('click', e => { e.preventDefault(); loadArticle('why_the_potato.md'); });
 }
-
-// --- Init -------------------------------------------------------------------
 
 buildArticleList();
