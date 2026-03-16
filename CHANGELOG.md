@@ -4,6 +4,29 @@ All notable governance changes should be recorded in this file.
 
 The format is based on Keep a Changelog, adapted for governance documents.
 
+## [0.7.0] - 2026-03-15
+
+### Added
+
+- `site/` — Phase 3 civic participation platform, hosted on GitHub Pages (ADR-0017).
+  Three components:
+  - `site/index.html` — manifesto browser: lists and renders all articles via the
+    GitHub Contents API with marked.js and DOMPurify.
+  - `site/proposals.html` — proposal portal: displays open PRs and guides
+    contributors to submit proposals via GitHub Issues template.
+  - `site/dashboard.html` — governance health dashboard: live metrics from the
+    GitHub API (article count, open PRs, contributors, pipeline status, recent
+    commits, VERSION, ADR count).
+  - `site/404.html` — custom 404 page.
+  - `site/css/main.css` — accessible styling using the party's brown colour palette.
+  - `site/js/config.js` — repository configuration (owner, repo, API paths).
+  - `site/js/github.js` — GitHub REST API wrapper with sessionStorage caching.
+  - `site/js/manifesto.js`, `proposals.js`, `dashboard.js` — page logic.
+  - `site/.nojekyll` — disables Jekyll processing.
+- `.github/workflows/deploy-pages.yml` — deploys `site/` to GitHub Pages on
+  push to `main` and on manual dispatch.
+- ADR-0017 documenting the GitHub Pages architecture decision.
+
 ## [0.6.0] - 2026-03-15
 
 ### Added

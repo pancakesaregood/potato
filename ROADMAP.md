@@ -57,21 +57,24 @@ interaction.
 
 ## Phase 3 — Civic Participation Platform
 
-**Status: Planned**
+**Status: Active**
 
 Build accessible digital infrastructure on top of the repository so
 participation does not require Git or Markdown familiarity.
 
+Hosted on GitHub Pages (`site/`). The web interface is a thin static client
+over the GitHub REST API — no separate database. See ADR-0017.
+
 Goals:
-- [ ] Web interface for browsing proposals and manifesto articles
-- [ ] Proposal submission form that generates correctly formatted PRs
-- [ ] Public governance health dashboard (automated from repository data)
+- [x] Web interface for browsing proposals and manifesto articles
+- [x] Proposal submission flow via GitHub Issues template
+- [x] Public governance health dashboard (automated from repository data)
+- [x] `deploy-pages.yml` — automatic deployment on merge to `main`
 - [ ] Bilingual interface (English and French)
-- [ ] WCAG 2.1 AA accessibility compliance
-- [ ] Mobile-accessible participation flows
-- [ ] Public API for proposal and governance data (read-only)
-- [ ] Integration with the existing CI/CD pipeline (web submissions go through
-      the same checks as direct PR submissions)
+- [ ] WCAG 2.1 AA accessibility audit and remediation
+- [ ] Mobile navigation (hamburger menu for small screens)
+- [ ] Pre-rendered article list (build step to avoid cold-load API calls)
+- [ ] GitHub OAuth for authenticated proposal submission without leaving the site
 
 Dependencies:
 - Phase 2 must produce stable governance workflows before building a UI on

@@ -64,3 +64,4 @@ how policy and governance are processed.
 | [0014](0014-gdpr-data-governance-primitive.md) | GDPR-Compliant Personal Data Governance Primitive | Accepted |
 | [0015](0015-complete-ci-linting-and-structure-validation.md) | Complete CI Linting and Structure Validation | Accepted |
 | [0016](0016-consolidate-experiments-directory.md) | Consolidate Experiments Directory | Accepted |
+| [0017](0017-github-pages-civic-participation-platform.md) | GitHub Pages as the Civic Participation Platform | Accepted |

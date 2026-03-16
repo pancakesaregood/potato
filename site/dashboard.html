@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Governance health dashboard — live metrics from the PPPC repository.">
+  <title>Governance Health — Peoples Potato Party of Canada</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-brand">
+      <span class="potato-icon" aria-hidden="true">🥔</span>PPPC
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="./index.html">Manifesto</a></li>
+      <li><a href="./proposals.html">Proposals</a></li>
+      <li><a href="./dashboard.html" class="active">Health</a></li>
+    </ul>
+    <div class="nav-github">
+      <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-wrap">
+    <div class="page-header">
+      <h1>Governance Health</h1>
+      <p>Live metrics drawn from the repository. All data is public and sourced from GitHub.</p>
+    </div>
+
+    <!-- Key stats -->
+    <section aria-labelledby="stats-heading">
+      <h2 class="section-heading" id="stats-heading">Repository metrics</h2>
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card">
+          <span class="stat-value" id="stat-articles">—</span>
+          <span class="stat-label">Manifesto articles</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-prs">—</span>
+          <span class="stat-label">Open proposals</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-contributors">—</span>
+          <span class="stat-label">Contributors</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-commits">—</span>
+          <span class="stat-label">Total commits</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipeline status -->
+    <section aria-labelledby="pipeline-heading" style="margin-top: 2rem;">
+      <h2 class="section-heading" id="pipeline-heading">CI pipeline</h2>
+      <div class="card" style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <div>
+          <div style="font-size:0.9rem; font-weight:600; margin-bottom:0.3rem;">policy-lint</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">
+            Markdown lint · Proposal validation · Rights compliance · Policy consistency · Structure check
+          </div>
+        </div>
+        <div id="pipeline-status" style="margin-left:auto;">
+          <span class="pipeline-badge pipeline-unknown">Checking…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent commits -->
+    <section aria-labelledby="commits-heading" style="margin-top: 2rem;">
+      <h2 class="section-heading" id="commits-heading">Recent governance activity</h2>
+      <div class="card" style="padding:0.5rem 1.25rem;">
+        <ul class="commit-list" id="commit-list" role="list">
+          <li><div class="state-loading"><div class="spinner"></div></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Governance cycle -->
+    <section aria-labelledby="cycle-heading" style="margin-top: 2rem;">
+      <h2 class="section-heading" id="cycle-heading">Governance cycle</h2>
+      <div class="card">
+        <p style="margin-bottom:0.5rem;">
+          The current version of the manifesto and governance documents is
+          tracked in <code>VERSION</code>.
+          Current version: <strong id="repo-version">—</strong>
+        </p>
+        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:0;">
+          Governance cycles close with a semantic version tag. Constitutional
+          amendments increment the major version. Policy adoptions increment
+          the minor version. Corrections increment the patch version.
+          See <a href="https://github.com/pancakesaregood/potato/blob/main/core/governance_kernel.md"
+                 target="_blank" rel="noopener">the governance kernel</a> for the full cycle definition.
+        </p>
+      </div>
+    </section>
+
+    <!-- ADR count -->
+    <section aria-labelledby="adr-heading" style="margin-top: 2rem;">
+      <h2 class="section-heading" id="adr-heading">Architecture decisions</h2>
+      <div class="card">
+        <p style="margin-bottom:0.5rem;">
+          <strong id="adr-count">—</strong> ADRs document the architectural and governance design decisions behind this repository.
+        </p>
+        <p style="margin-bottom:0;">
+          <a href="https://github.com/pancakesaregood/potato/tree/main/docs/adr"
+             target="_blank" rel="noopener">Browse all ADRs on GitHub ↗</a>
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>
+    Peoples Potato Party of Canada &mdash; governance as code &mdash;
+    <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">source on GitHub</a>
+  </p>
+</footer>
+
+<script type="module" src="./js/dashboard.js"></script>
+</body>
+</html>

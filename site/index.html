@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read the Peoples Potato Party of Canada manifesto — a governance-as-code experiment in open, transparent, evidence-based politics.">
+  <title>Manifesto — Peoples Potato Party of Canada</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-brand">
+      <span class="potato-icon" aria-hidden="true">🥔</span>PPPC
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="./index.html" class="active">Manifesto</a></li>
+      <li><a href="./proposals.html">Proposals</a></li>
+      <li><a href="./dashboard.html">Health</a></li>
+    </ul>
+    <div class="nav-github">
+      <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-wrap">
+    <div class="page-header">
+      <h1>Manifesto</h1>
+      <p>The Peoples Potato Party of Canada — governance as code, policy in public.</p>
+    </div>
+
+    <div class="two-col" id="manifesto-layout">
+      <!-- Left panel: article list -->
+      <aside class="article-list-panel" aria-label="Article list">
+        <h2>Articles</h2>
+        <nav aria-label="Manifesto articles">
+          <ul class="article-list" id="article-list" role="list">
+            <li><div class="state-loading"><div class="spinner"></div></div></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Right panel: article content -->
+      <article class="article-panel" id="article-panel" aria-live="polite" aria-busy="false">
+        <div class="state-empty" id="article-welcome">
+          <p style="font-size:1.05rem; color:var(--text-secondary);">
+            Select an article from the list to read it.<br>
+            <span style="font-size:0.9rem;">Or start with
+            <a href="#" data-article="why_the_potato.md">Why the Potato?</a></span>
+          </p>
+        </div>
+        <div id="article-content" hidden></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- About section at the bottom -->
+  <section style="background: var(--cream-dark); padding: 2.5rem 1.25rem; margin-top: 3rem;">
+    <div style="max-width: var(--max-width); margin: 0 auto;">
+      <h2 style="margin-top:0; font-size:1.15rem;">About this project</h2>
+      <p style="color:var(--text-secondary); max-width:700px;">
+        This is a civic governance experiment. The PPPC is not a registered
+        political party. Its manifesto, constitution, and bylaws are stored
+        as version-controlled text files in a public GitHub repository.
+        Changes are proposed as pull requests, reviewed openly, and validated
+        by automated checks. The source of truth is always the repository.
+      </p>
+      <p style="margin-bottom:0;">
+        <a href="./proposals.html">Propose a change →</a>
+        &emsp;
+        <a href="https://github.com/pancakesaregood/potato/blob/main/docs/how_to_participate.md" target="_blank" rel="noopener">How to participate →</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>
+    Peoples Potato Party of Canada &mdash; governance as code &mdash;
+    <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">source on GitHub</a>
+  </p>
+</footer>
+
+<script type="module" src="./js/manifesto.js"></script>
+</body>
+</html>
