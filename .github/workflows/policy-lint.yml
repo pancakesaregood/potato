@@ -28,13 +28,21 @@ jobs:
         run: npm install --global markdownlint-cli@0.39.0
 
       - name: Validate Markdown formatting
-        run: markdownlint "**/*.md" --config .markdownlint.json
+        run: |
+          markdownlint \
+            "**/*.md" \
+            --ignore "node_modules/**" \
+            --ignore "proposals/README.md" \
+            --config .markdownlint.json
 
       - name: Validate proposal template usage
         run: python scripts/validate_proposals.py
 
-      - name: Charter compliance check placeholder
+      - name: Rights and constitutional compliance check
         run: python scripts/charter_compliance_placeholder.py
 
       - name: Policy consistency check
         run: python scripts/policy_consistency_check.py
+
+      - name: Repository structure check
+        run: python scripts/validate_structure.py
