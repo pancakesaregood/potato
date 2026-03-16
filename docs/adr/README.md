@@ -60,3 +60,7 @@ how policy and governance are processed.
 | [0010](0010-add-participation-layer.md) | Add Participation Layer and Community Activation Infrastructure | Accepted |
 | [0011](0011-manifesto-governance-concepts-and-constitutional-register.md) | Integrate Governance-as-Code into the Manifesto and Rewrite the Constitution in Constitutional Register | Accepted |
 | [0012](0012-country-agnostic-governance-framework.md) | Refactor into a Country-Agnostic Governance Framework | Accepted |
+| [0013](0013-governance-kernel.md) | Governance Kernel — Universal Governance Primitives | Accepted |
+| [0014](0014-gdpr-data-governance-primitive.md) | GDPR-Compliant Personal Data Governance Primitive | Accepted |
+| [0015](0015-complete-ci-linting-and-structure-validation.md) | Complete CI Linting and Structure Validation | Accepted |
+| [0016](0016-consolidate-experiments-directory.md) | Consolidate Experiments Directory | Accepted |
