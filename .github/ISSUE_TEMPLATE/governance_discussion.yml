@@ -18,6 +18,21 @@ body:
         use the Policy Proposal or Policy Question template instead.
 
   - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: >
+        Does this concern a specific governance instance, or the shared
+        framework that all instances use?
+      options:
+        - Instance-specific — Canada (PPPC)
+        - Instance-specific — Other (describe below)
+        - Framework-level — affects core/ and all instances
+        - Both — instance issue that may require a framework change
+    validations:
+      required: true
+
+  - type: dropdown
     id: category
     attributes:
       label: Category
@@ -26,10 +41,13 @@ body:
         - Contribution workflow (how to submit proposals)
         - CI/CD pipeline (automated checks)
         - Roles and authority (maintainers, reviewers, contributors)
-        - Repository structure (where things live)
+        - Repository structure (core/, instances/, docs/)
         - Issue and PR templates
-        - Constitutional or bylaw question
+        - Constitutional or bylaw question (instance-specific)
+        - Governance kernel or core protocol (framework-level)
+        - Instance setup or configuration
         - ADR (Architecture Decision Record)
+        - Data governance or privacy
         - Accessibility (how to make participation easier)
         - Something else
     validations:
@@ -43,9 +61,9 @@ body:
         Describe the governance question or issue you want to raise. Be as
         specific as you can.
       placeholder: |
-        e.g. The current proposal template requires a "Constitutional Review"
-        section but there is no guidance on what to write if you are not a
-        lawyer. Should there be examples or a checklist?
+        e.g. The current proposal template requires a "Rights and Constitutional
+        Notes" section but there is no guidance on what to write if you are not
+        a lawyer. Should there be examples or a checklist?
     validations:
       required: true
 
@@ -57,7 +75,7 @@ body:
         If relevant, describe the current rule or document that addresses
         (or fails to address) this issue.
       placeholder: |
-        Quote or link to the relevant part of the docs/ or ARCHITECTURE.md
+        Quote or link to the relevant part of core/, docs/, or ARCHITECTURE.md
         if it exists.
     validations:
       required: false
@@ -73,7 +91,7 @@ body:
       required: false
 
   - type: dropdown
-    id: scope
+    id: change_scope
     attributes:
       label: Scope of change (if proposing one)
       description: >
@@ -83,6 +101,7 @@ body:
         - Minor (documentation fix, clarification)
         - Moderate (workflow change, new template or tool)
         - Major (constitutional, bylaw, or ADR-level change)
+        - Kernel-level (changes core/governance_kernel.md — highest bar)
         - Not proposing a change — raising a question only
     validations:
       required: false
@@ -93,10 +112,14 @@ body:
       label: Relevant documents
       description: Check which documents are most relevant to this discussion.
       options:
+        - label: "`core/governance_kernel.md`"
+        - label: "`core/governance_protocol/`"
+        - label: "`core/proposal_system/`"
         - label: "`docs/how_to_participate.md`"
         - label: "`docs/governance_roles.md`"
         - label: "`ARCHITECTURE.md`"
+        - label: "`INSTANCE_GUIDE.md`"
         - label: "`AGENTS.md`"
-        - label: "`docs/governance/constitution.md`"
+        - label: "`docs/governance/constitution.md` (Canada instance)"
         - label: "`docs/adr/` (one or more ADRs)"
         - label: "`.github/workflows/policy-lint.yml`"
