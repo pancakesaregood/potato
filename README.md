@@ -15,13 +15,13 @@ party and not legal advice.
 
 ```mermaid
 flowchart LR
-    A([Community\nhas an idea]) --> B[Open\na GitHub Issue]
-    B --> C[Draft\na Proposal]
-    C --> D[Pull Request\n+ CI checks]
-    D --> E[Community\nReview]
+    A([Community idea]) --> B[GitHub Issue]
+    B --> C[Draft Proposal]
+    C --> D[Pull Request + CI]
+    D --> E[Community Review]
     E --> F{Consensus?}
-    F -- Yes --> G[Merged to\nCanonical Policy]
-    F -- No --> H[Revised or\nArchived]
+    F -- Yes --> G[Merged to Policy]
+    F -- No --> H[Revised or Archived]
 ```
 
 ---
