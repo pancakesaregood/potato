@@ -31,7 +31,18 @@ function cacheSet(url, data) {
   try {
     sessionStorage.setItem(cacheKey(url), JSON.stringify({ data, ts: Date.now() }));
   } catch {
-    // sessionStorage quota exceeded — silently skip caching.
+    // sessionStorage quota exceeded; silently skip caching.
+  }
+}
+
+function decodeBase64Utf8(content) {
+  const binary = atob(content.replace(/\n/g, ''));
+  const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+
+  try {
+    return new TextDecoder('utf-8').decode(bytes);
+  } catch {
+    return binary;
   }
 }
 
@@ -67,7 +78,7 @@ export async function getManifestoFiles() {
   const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${MANIFESTO_PATH}`;
   const files = await fetchJSON(url);
   return files
-    .filter(f => f.type === 'file' && f.name.endsWith('.md') && f.name.toLowerCase() !== 'readme.md')
+    .filter((file) => file.type === 'file' && file.name.endsWith('.md') && file.name.toLowerCase() !== 'readme.md')
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
@@ -78,8 +89,7 @@ export async function getManifestoFiles() {
 export async function getFileContent(path) {
   const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
   const file = await fetchJSON(url);
-  // GitHub API returns content as base64 with newlines.
-  return atob(file.content.replace(/\n/g, ''));
+  return decodeBase64Utf8(file.content);
 }
 
 // --- Pulls API ---------------------------------------------------------------
@@ -130,33 +140,32 @@ export async function getPipelineStatus() {
 
 /**
  * Extracts a human-readable title from a manifesto filename.
- * e.g. "article_05_housing_and_homelessness.md" → "Article 05: Housing and Homelessness"
- *      "why_the_potato.md" → "Why the Potato?"
+ * e.g. "article_05_housing_and_homelessness.md" -> "Article 05: Housing and Homelessness"
+ *      "why_the_potato.md" -> "Why the Potato?"
  */
 export function filenameToTitle(filename) {
   const base = filename.replace(/\.md$/, '');
 
-  // Special case: why_the_potato
   if (base === 'why_the_potato') return 'Why the Potato?';
 
-  // article_NN_some_title pattern
   const match = base.match(/^article_(\d+)_(.+)$/);
   if (match) {
     const num = match[1];
-    const words = match[2].split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1));
+    const words = match[2].split('_').map((word) => word.charAt(0).toUpperCase() + word.slice(1));
     return `Article ${num}: ${words.join(' ')}`;
   }
 
-  // Fallback: capitalise words
-  return base.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  return base.split('_').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
 /**
  * Formats an ISO date string to a readable date.
  */
 export function formatDate(iso) {
-  if (!iso) return '—';
+  if (!iso) return '-';
   return new Date(iso).toLocaleDateString('en-CA', {
-    year: 'numeric', month: 'long', day: 'numeric'
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
 }
