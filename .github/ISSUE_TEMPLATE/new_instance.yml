@@ -1,0 +1,232 @@
+name: New Governance Instance
+description: >
+  Start a new community instance of the governance framework. This form
+  collects everything needed to begin. A maintainer will help you bootstrap
+  your instance directory once this is submitted.
+title: "[New Instance] "
+labels:
+  - new-instance
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Starting a new governance instance
+
+        An instance is this framework applied to your community — a political
+        movement, civic organisation, neighbourhood group, or any collective
+        that wants to manage decisions openly and accountably.
+
+        The Canada instance (`instances/canada/`) is the reference
+        implementation. Your instance will have the same structure, adapted
+        to your community's context, laws, and language.
+
+        **Fill in what you know. Leave fields blank where you need help.**
+        The purpose of this issue is to start a conversation, not to have
+        all the answers before you begin.
+
+        ---
+
+  - type: input
+    id: community_name
+    attributes:
+      label: Community name
+      description: The full name of your community, movement, or organisation.
+      placeholder: "e.g. Peoples Potato Party of Aotearoa New Zealand"
+    validations:
+      required: true
+
+  - type: input
+    id: instance_slug
+    attributes:
+      label: Instance slug
+      description: >
+        A short, lowercase, hyphenated identifier for your instance directory.
+        This becomes `instances/<slug>/`.
+      placeholder: "e.g. new-zealand  or  municipio-libre-mx  or  uk-green-alliance"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: community_type
+    attributes:
+      label: Community type
+      description: What kind of organisation are you building this for?
+      options:
+        - Political party or movement
+        - Civic organisation or NGO
+        - Municipal or local government initiative
+        - Community co-operative or housing organisation
+        - University or student union
+        - Trade union or worker organisation
+        - International or cross-border movement
+        - Experimental or research project
+        - Other (describe in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Country or jurisdiction
+      description: >
+        Where does your community operate? If multiple countries,
+        list the primary one.
+      placeholder: "e.g. New Zealand  or  Mexico, federal level  or  Scotland"
+    validations:
+      required: true
+
+  - type: textarea
+    id: languages
+    attributes:
+      label: Languages
+      description: >
+        What language(s) will your governance documents be written in?
+        Note any official bilingualism or multilingualism requirements.
+      placeholder: |
+        e.g. English (primary)
+        e.g. Spanish and Nahuatl
+        e.g. Welsh and English (equal status required by organisational rules)
+    validations:
+      required: true
+
+  - type: textarea
+    id: rights_framework
+    attributes:
+      label: Rights and constitutional framework
+      description: >
+        What legal or constitutional framework governs rights in your
+        jurisdiction? The Canada instance uses the Canadian Charter of Rights
+        and Freedoms. Your instance should reference the equivalent for your
+        community.
+
+        If no applicable framework exists (e.g. a private organisation),
+        write "self-contained member rights declaration needed."
+      placeholder: |
+        e.g. New Zealand Bill of Rights Act 1990
+        e.g. European Convention on Human Rights (UK Human Rights Act 1998)
+        e.g. Constitution of Mexico, Articles 1–29
+        e.g. Self-contained member rights declaration — no statutory framework applies
+    validations:
+      required: false
+
+  - type: textarea
+    id: electoral_governance
+    attributes:
+      label: Electoral or governance structure
+      description: >
+        How is your community structured? Describe how decisions are made,
+        how representatives are chosen, and what the rough governance units are.
+        This shapes how the constitution and bylaws will be written.
+      placeholder: |
+        e.g. Single-member plurality electoral districts (like Canada's ridings)
+        e.g. Proportional representation, national lists
+        e.g. Consensus-based general assembly with working groups
+        e.g. Co-operative board structure with member voting
+        e.g. Not yet decided — need guidance on options
+    validations:
+      required: false
+
+  - type: textarea
+    id: founding_principles
+    attributes:
+      label: Founding principles (draft or notes)
+      description: >
+        What are the two or three things your community will not compromise on?
+        These anchor your foundational manifesto article. They don't need to be
+        polished — notes or bullet points are fine.
+      placeholder: |
+        e.g. Decisions must be made with genuine community consent.
+        e.g. The environment is a stakeholder, not just a resource.
+        e.g. Economic policy must be evaluated against its effect on the least well-off.
+    validations:
+      required: false
+
+  - type: textarea
+    id: policy_priorities
+    attributes:
+      label: Initial policy priorities
+      description: >
+        What policy domains matter most to your community right now?
+        These become your first manifesto articles beyond the foundational one.
+        Three to five is a good starting set.
+      placeholder: |
+        e.g. Housing affordability
+        e.g. Climate transition and energy sovereignty
+        e.g. Indigenous land rights and co-governance
+        e.g. Electoral reform
+    validations:
+      required: false
+
+  - type: input
+    id: maintainers
+    attributes:
+      label: Initial maintainers
+      description: >
+        Who will review and merge contributions for this instance?
+        GitHub usernames, comma-separated. At least two maintainers are
+        recommended for resilience.
+      placeholder: "e.g. @username1, @username2"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: starting_point
+    attributes:
+      label: Starting point preference
+      description: >
+        Would you prefer to adapt the Canada instance as a structural template,
+        or start from the minimal core templates?
+      options:
+        - Adapt the Canada instance structure (recommended for political parties)
+        - Start from core templates only (better for non-party organisations)
+        - Not sure — want guidance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: help_needed
+    attributes:
+      label: Where do you need the most help?
+      description: Pick the area where you would most benefit from guidance.
+      options:
+        - Writing the founding constitution
+        - Adapting bylaws and operating rules
+        - Writing the first manifesto articles
+        - Understanding the CI/CD pipeline
+        - Configuring jurisdiction-specific compliance checks
+        - Setting up the proposal review process
+        - All of the above — general onboarding
+        - I am comfortable with the guide and just need the directory set up
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: >
+        Anything else that would help a maintainer understand what you are
+        building and what you need. Include links to existing documents,
+        websites, or prior governance work if relevant.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Before you submit
+      options:
+        - label: >
+            I have read `INSTANCE_GUIDE.md` or understand that I will need to
+            follow it to build my instance.
+          required: true
+        - label: >
+            I understand that this framework is for open, transparent governance —
+            my instance's documents will be publicly visible in this repository.
+          required: true
+        - label: >
+            I understand that the Canada instance (`instances/canada/`) is the
+            reference implementation, not a template to copy wholesale — its
+            content is Canada-specific.
+          required: false

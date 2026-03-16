@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Start a new governance instance — apply the open governance framework to your community, movement, or organisation.">
+  <title>Start a New Instance — Peoples Potato Party Governance Framework</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    .step-list { list-style: none; padding: 0; margin: 0; counter-reset: steps; }
+    .step-item {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+      align-items: start;
+    }
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      width: 2.5rem; height: 2.5rem;
+      background: var(--brown-mid);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .step-body h3 { margin-top: 0.1rem; font-size: 1rem; }
+    .step-body p  { margin: 0.3rem 0 0; font-size: 0.9rem; color: var(--text-secondary); }
+
+    .instance-type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .instance-type {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .instance-type-icon { font-size: 1.5rem; line-height: 1; margin-bottom: 0.4rem; display: block; }
+    .instance-type strong { display: block; margin-bottom: 0.2rem; color: var(--brown-dark); }
+
+    .checklist { list-style: none; padding: 0; margin: 0; }
+    .checklist li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+      font-size: 0.92rem;
+      display: flex; gap: 0.6rem; align-items: baseline;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before {
+      content: "○";
+      color: var(--brown-pale);
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+
+    .reference-card {
+      background: var(--cream-dark);
+      border-left: 4px solid var(--brown-mid);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .reference-card strong { color: var(--brown-dark); }
+    .reference-card p { margin: 0.25rem 0 0; font-size: 0.9rem; color: var(--text-secondary); }
+
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      background: var(--brown-mid);
+      color: var(--white);
+      padding: 0.85rem 1.75rem;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .cta-primary:hover { background: var(--brown-dark); color: var(--white); }
+
+    .note-box {
+      background: var(--cream-dark);
+      border: 1px solid var(--brown-pale);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .note-box strong { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-brand">
+      <span class="potato-icon" aria-hidden="true">🥔</span>PPPC
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="./index.html">Manifesto</a></li>
+      <li><a href="./proposals.html">Proposals</a></li>
+      <li><a href="./dashboard.html">Health</a></li>
+    </ul>
+    <div class="nav-github">
+      <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge" aria-hidden="true">🌱</div>
+      <h1>Start a new governance instance</h1>
+      <p class="tagline">
+        The framework that runs this party can run yours. An instance is the
+        same open governance infrastructure — version-controlled, auditable,
+        contribution-based — applied to your community's context, laws, and language.
+      </p>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+
+    <!-- What is an instance -->
+    <section aria-labelledby="what-heading" style="margin-bottom:2.5rem;">
+      <h2 id="what-heading" style="margin-top:0;">What is an instance?</h2>
+      <p>
+        This repository separates <strong>the framework</strong> (how governance-as-code
+        works — primitives, proposal systems, CI pipeline) from <strong>the content</strong>
+        (what a specific community stands for). The framework lives in <code>core/</code>.
+        Each community's content lives in <code>instances/&lt;name&gt;/</code>.
+      </p>
+      <p>
+        The Canada instance (<code>instances/canada/</code>) is the reference
+        implementation — a complete worked example of the framework applied to a
+        fictional Canadian federal political movement. Your instance uses the same
+        structure, adapted to where you are and who you are.
+      </p>
+
+      <div class="instance-type-grid" aria-label="Examples of community types">
+        <div class="instance-type">
+          <span class="instance-type-icon" aria-hidden="true">🗳️</span>
+          <strong>Political party</strong>
+          A new movement with a manifesto, constitution, and riding or district structure.
+        </div>
+        <div class="instance-type">
+          <span class="instance-type-icon" aria-hidden="true">🏘️</span>
+          <strong>Civic organisation</strong>
+          A community group, NGO, or advocacy coalition that makes collective decisions.
+        </div>
+        <div class="instance-type">
+          <span class="instance-type-icon" aria-hidden="true">🏛️</span>
+          <strong>Municipal initiative</strong>
+          A local government or participatory budgeting project with open public input.
+        </div>
+        <div class="instance-type">
+          <span class="instance-type-icon" aria-hidden="true">🤝</span>
+          <strong>Co-operative</strong>
+          A worker or housing co-op managing policy and governance decisions transparently.
+        </div>
+        <div class="instance-type">
+          <span class="instance-type-icon" aria-hidden="true">🎓</span>
+          <strong>Student union</strong>
+          A university or college body that wants auditable, accountable governance.
+        </div>
+        <div class="instance-type">
+          <span class="instance-type-icon" aria-hidden="true">🌐</span>
+          <strong>Research project</strong>
+          An experiment in democratic governance design, open to anyone to observe.
+        </div>
+      </div>
+    </section>
+
+    <!-- What you are building -->
+    <section aria-labelledby="building-heading" style="margin-bottom:2.5rem;">
+      <h2 id="building-heading">What you will build</h2>
+      <p>
+        An instance has four components. You create them; the framework provides
+        the structure and tooling.
+      </p>
+
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));">
+        <div class="card">
+          <h2>Founding document</h2>
+          <p>Your constitution: member rights, institutional structure, amendment
+          procedures. The supreme governing instrument of your community.</p>
+        </div>
+        <div class="card">
+          <h2>Operating rules</h2>
+          <p>Bylaws or standing orders: how meetings work, how officers are
+          selected, how finances are managed, how membership is defined.</p>
+        </div>
+        <div class="card">
+          <h2>Policy manifesto</h2>
+          <p>Modular articles, one per domain: what your community stands for
+          and proposes to do. Start with two or three and grow from there.</p>
+        </div>
+        <div class="card">
+          <h2>Proposal process</h2>
+          <p>The mechanism through which members suggest changes. Inherited from
+          <code>core/</code> — you configure it, not build it from scratch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section aria-labelledby="steps-heading" style="margin-bottom:2.5rem;">
+      <h2 id="steps-heading">Nine steps from nothing to a running instance</h2>
+      <p style="color:var(--text-secondary); margin-bottom:1.25rem;">
+        Full detail in <a href="https://github.com/pancakesaregood/potato/blob/main/INSTANCE_GUIDE.md"
+        target="_blank" rel="noopener"><code>INSTANCE_GUIDE.md</code></a>.
+        The issue template below walks you through the questions before you start.
+      </p>
+
+      <div class="card" style="padding:0.5rem 1.5rem;">
+        <ol class="step-list" role="list">
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">1</div>
+            <div class="step-body">
+              <h3>Fork the repository</h3>
+              <p>Fork on GitHub, clone your fork, create a branch named
+              <code>instance/&lt;your-name&gt;</code>.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">2</div>
+            <div class="step-body">
+              <h3>Create your instance directory</h3>
+              <p>Six subdirectories: <code>manifesto/</code>, <code>proposals/</code>,
+              <code>governance/</code>, <code>experiments/</code>, <code>cycle_reports/</code>,
+              and an instance <code>README.md</code>.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">3</div>
+            <div class="step-body">
+              <h3>Write your founding document</h3>
+              <p>Start from the Canada constitution structure. Replace every
+              Canada-specific reference with your jurisdiction's equivalent.
+              Keep the structural logic: constitutional supremacy, member rights
+              floor, graduated amendment thresholds.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">4</div>
+            <div class="step-body">
+              <h3>Write your operating rules</h3>
+              <p>Membership, assembly, leadership selection, policy development.
+              Use the Canada bylaws as structural references — adapt, don't copy.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">5</div>
+            <div class="step-body">
+              <h3>Write your foundational manifesto articles</h3>
+              <p>Start with two or three articles. The first should state what
+              your community will not compromise on. Each article must have the
+              four required sections: Summary, Principles, Policy Mechanisms,
+              Measurable Outcomes.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">6</div>
+            <div class="step-body">
+              <h3>Customise the proposal template</h3>
+              <p>Copy <code>core/proposal_system/proposal_template.md</code> to
+              your instance and add any jurisdiction-specific review sections
+              (e.g. constitutional consistency, FPIC review, jurisdictional
+              analysis).</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">7</div>
+            <div class="step-body">
+              <h3>Configure compliance checks</h3>
+              <p>Edit <code>scripts/charter_compliance_placeholder.py</code> for
+              your jurisdiction's rights framework, or leave the placeholder in
+              place to start — it enforces structure without legal analysis.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">8</div>
+            <div class="step-body">
+              <h3>Open your first governance cycle</h3>
+              <p>Create <code>cycle_reports/cycle_001.md</code>. Invite
+              contributions. The founding cycle is complete when the founding
+              document and at least one manifesto article have been ratified.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num" aria-hidden="true">9</div>
+            <div class="step-body">
+              <h3>Register your instance</h3>
+              <p>Add a row to <code>instances/README.md</code> and open a pull
+              request to the upstream framework. Your instance becomes part of
+              the growing collection.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Before you start checklist -->
+    <section aria-labelledby="checklist-heading" style="margin-bottom:2.5rem;">
+      <h2 id="checklist-heading">Before you open the issue</h2>
+      <p>
+        You don't need to have all of this ready — the issue is for starting the
+        conversation. But thinking through these questions first will make the
+        process faster.
+      </p>
+      <div class="card" style="padding:0.5rem 1.5rem;">
+        <ul class="checklist" role="list">
+          <li>What is your community called? What is a short slug for the directory?</li>
+          <li>What country or jurisdiction are you in? What language(s) do you work in?</li>
+          <li>What rights framework applies — a national constitution, a charter, or a
+              self-contained member rights declaration?</li>
+          <li>How are decisions made in your community? Single-member districts, proportional
+              voting, consensus assembly, co-op board?</li>
+          <li>What are the two or three things your community will not compromise on?</li>
+          <li>What policy domains matter most to you right now?</li>
+          <li>Who will be your first maintainers — the people who merge contributions?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Reference material -->
+    <section aria-labelledby="ref-heading" style="margin-bottom:2.5rem;">
+      <h2 id="ref-heading">Reference material</h2>
+
+      <div class="reference-card">
+        <strong>INSTANCE_GUIDE.md</strong> — the complete nine-step guide
+        <p><a href="https://github.com/pancakesaregood/potato/blob/main/INSTANCE_GUIDE.md"
+               target="_blank" rel="noopener">Read on GitHub ↗</a></p>
+      </div>
+      <div class="reference-card">
+        <strong>instances/canada/</strong> — the reference implementation
+        <p>Read the constitution and one or two manifesto articles to understand
+        the expected level of detail and tone.
+        <a href="https://github.com/pancakesaregood/potato/tree/main/instances/canada"
+           target="_blank" rel="noopener">Browse on GitHub ↗</a> or
+        <a href="./index.html">read the manifesto on this site ↗</a></p>
+      </div>
+      <div class="reference-card">
+        <strong>core/governance_kernel.md</strong> — the eight governance primitives
+        <p>Defines what every instance must implement: Member, Proposal, Discussion,
+        Review, Decision, Cycle, Transparency Log, Personal Data.
+        <a href="https://github.com/pancakesaregood/potato/blob/main/core/governance_kernel.md"
+           target="_blank" rel="noopener">Read on GitHub ↗</a></p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Ready to start?</h2>
+      <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+        Open the issue template. Fill in what you know. A maintainer will respond
+        to help you set up your instance directory and get your first governance
+        cycle running.
+      </p>
+
+      <p>
+        <a href="https://github.com/pancakesaregood/potato/issues/new?template=new_instance.yml"
+           target="_blank" rel="noopener" class="cta-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          Open new instance request ↗
+        </a>
+      </p>
+
+      <p style="margin-top:1.25rem;">
+        <div class="note-box">
+          <strong>You will need a GitHub account to submit the issue.</strong>
+          If you prefer not to use GitHub, open a
+          <a href="https://github.com/pancakesaregood/potato/issues/new?template=governance_discussion.yml"
+             target="_blank" rel="noopener">Governance Discussion issue</a>
+          and describe what you are building — a maintainer will help you from there.
+        </div>
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>
+    Peoples Potato Party of Canada &mdash; governance as code &mdash;
+    <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">source on GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>
