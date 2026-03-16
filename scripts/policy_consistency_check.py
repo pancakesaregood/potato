@@ -21,6 +21,8 @@ MANIFESTO_HEADINGS = [
     "## Measurable Outcomes",
 ]
 
+MANIFESTO_ARTICLE_GLOB = "article_*.md"
+
 CIVIC_INFRA_HEADINGS = [
     "## Summary",
     "## Design Principles",
@@ -74,7 +76,11 @@ def main() -> int:
         if not manifesto_dirs:
             issues.append("No manifesto directories found under instances/*/manifesto/")
         for manifesto_dir in manifesto_dirs:
-            articles = sorted(manifesto_dir.glob("*.md"))
+            articles = sorted(manifesto_dir.glob(MANIFESTO_ARTICLE_GLOB))
+            if not articles:
+                issues.append(
+                    f"No manifesto article files found in {manifesto_dir.as_posix()}/"
+                )
             for article in articles:
                 missing = check_headings(article, MANIFESTO_HEADINGS)
                 for heading in missing:

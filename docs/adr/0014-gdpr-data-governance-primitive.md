@@ -204,8 +204,7 @@ which all governance instances do by definition. Treating it as a primitive
 signals its weight correctly. An appendix would be read as advisory; the
 primitive designation is normative.
 
-### Alternative 2: Resolve the transparency/erasure tension by excluding
-participation data from the Transparency Log
+### Alternative 2: Resolve the transparency/erasure tension by excluding participation data from the Transparency Log
 
 Description: Change the Transparency Log requirement so that it records
 governance acts without attributing them to identifiable individuals — a
