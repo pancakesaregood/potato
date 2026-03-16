@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Potato is an open source governance framework for transparent, collaborative political and civic organising.">
+  <title>Potato - Open Source Governance Framework</title>
+  <link rel="stylesheet" href="./site/css/main.css">
+  <style>
+    .landing-hero {
+      background:
+        radial-gradient(circle at top left, rgba(196, 154, 108, 0.22), transparent 38%),
+        linear-gradient(135deg, var(--brown-darkest) 0%, var(--brown-dark) 55%, #5a3822 100%);
+      color: var(--cream-light);
+      padding: 4.75rem 1.25rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .landing-hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -40% auto;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(196, 154, 108, 0.18), transparent 68%);
+      pointer-events: none;
+    }
+
+    .landing-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.86rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-dark);
+    }
+
+    .hero-mark-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 1.2rem;
+    }
+
+    .landing-hero h1 {
+      max-width: 9.5ch;
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      line-height: 1.04;
+      color: var(--white);
+      margin: 0 0 1rem;
+    }
+
+    .landing-hero p {
+      max-width: 58rem;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: var(--cream-dark);
+      margin: 0 0 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.75rem;
+    }
+
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: 1.4rem;
+      color: var(--cream-dark);
+      font-size: 0.92rem;
+    }
+
+    .hero-note span {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 999px;
+      background: var(--green-earth);
+      flex-shrink: 0;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .flow-card,
+    .summary-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem 1.6rem;
+    }
+
+    .flow-card h2,
+    .summary-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.45rem;
+      font-size: 1.2rem;
+    }
+
+    .summary-card p,
+    .flow-card p {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+    }
+
+    .summary-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .summary-list li {
+      display: grid;
+      grid-template-columns: 1.6rem 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      margin: 0;
+    }
+
+    .summary-list strong {
+      color: var(--brown-dark);
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .summary-dot {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 999px;
+      background: var(--cream-dark);
+      color: var(--brown-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.84rem;
+      margin-top: 0.05rem;
+    }
+
+    .mermaid-shell {
+      margin-top: 1rem;
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-md);
+      background:
+        linear-gradient(180deg, rgba(250, 244, 236, 0.8), rgba(232, 213, 183, 0.5));
+      padding: 1rem;
+      overflow-x: auto;
+    }
+
+    .mermaid {
+      min-width: 680px;
+    }
+
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .entry-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 1.25rem 1.35rem;
+    }
+
+    .entry-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.02rem;
+    }
+
+    .entry-card p {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.9rem;
+    }
+
+    .entry-card a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .entry-card a:hover {
+      text-decoration: underline;
+    }
+
+    .status-strip {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.9rem;
+    }
+
+    .status-item {
+      padding: 0.95rem 1rem;
+      border-radius: var(--radius-md);
+      background: var(--cream-dark);
+      color: var(--brown-darkest);
+    }
+
+    .status-item strong {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .status-item span {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+    }
+
+    .ops-section {
+      background: var(--cream-dark);
+      border-top: 1px solid var(--brown-pale);
+      border-bottom: 1px solid var(--brown-pale);
+      margin-top: 3rem;
+    }
+
+    .ops-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .ops-panel {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(107, 66, 38, 0.15);
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.2rem;
+    }
+
+    .ops-panel h3 {
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+      font-size: 1rem;
+    }
+
+    .ops-panel p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+
+    .page-wrap.landing-main {
+      padding-top: 2.25rem;
+    }
+
+    @media (max-width: 860px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .landing-hero {
+        padding-top: 4rem;
+      }
+
+      .landing-hero h1 {
+        max-width: none;
+      }
+
+      .mermaid {
+        min-width: 560px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="./index.html" class="nav-brand">
+        <span class="potato-icon" aria-hidden="true">&#x1F954;</span>potato
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="./index.html" class="active">Overview</a></li>
+        <li><a href="./site/index.html">Manifesto</a></li>
+        <li><a href="./site/proposals.html">Proposals</a></li>
+        <li><a href="./site/dashboard.html">Health</a></li>
+        <li><a href="./site/new-instance.html">New Instance</a></li>
+      </ul>
+      <div class="nav-github">
+        <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="landing-hero">
+      <div class="landing-inner">
+        <div class="hero-mark">
+          <span class="hero-mark-badge" aria-hidden="true">&#x1F954;</span>
+          Open Source Governance Infrastructure
+        </div>
+        <h1>Build political governance in public.</h1>
+        <p>
+          Potato is a governance framework for communities that want constitutions,
+          manifesto articles, proposals, and review workflows to behave like
+          maintainable infrastructure: version controlled, inspectable, tested,
+          and open to contribution.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./site/index.html">Read the Canada manifesto</a>
+          <a class="btn btn-outline" href="./site/new-instance.html">Start a new instance</a>
+        </div>
+        <div class="hero-note">
+          <span aria-hidden="true"></span>
+          Public source of truth: Git history, proposal review, and automated checks.
+        </div>
+      </div>
+    </section>
+
+    <div class="page-wrap landing-main">
+      <section class="overview-grid" aria-labelledby="flow-heading">
+        <div class="flow-card">
+          <h2 id="flow-heading">How a policy change moves</h2>
+          <p>
+            The framework treats governance as a reviewable pipeline rather than
+            a static PDF. Ideas start in public, pick up structure, pass checks,
+            then either merge or loop back for revision.
+          </p>
+          <div class="mermaid-shell" aria-label="Governance flowchart">
+            <div class="mermaid">
+flowchart LR
+  A[Community idea] --> B[Discussion or issue]
+  B --> C[Draft proposal]
+  C --> D[Pull request and CI]
+  D --> E[Community review]
+  E --> F{Consensus reached?}
+  F -->|Yes| G[Merged into policy]
+  F -->|Not yet| H[Revise, reopen, or archive]
+            </div>
+          </div>
+        </div>
+
+        <aside class="summary-card" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">What this repo gives you</h2>
+          <p>
+            A reusable operating model for civic groups, political movements,
+            student unions, cooperatives, and any community that wants auditable
+            collective decision-making.
+          </p>
+          <ul class="summary-list" role="list">
+            <li>
+              <span class="summary-dot" aria-hidden="true">1</span>
+              <div>
+                <strong>Manifesto and constitution modules</strong>
+                One topic per file, easier to review and amend without rewriting everything.
+              </div>
+            </li>
+            <li>
+              <span class="summary-dot" aria-hidden="true">2</span>
+              <div>
+                <strong>Governance review pipeline</strong>
+                Issues, pull requests, CI checks, and explicit ratification paths.
+              </div>
+            </li>
+            <li>
+              <span class="summary-dot" aria-hidden="true">3</span>
+              <div>
+                <strong>Instance-based architecture</strong>
+                Keep the framework stable while each community adapts the content to its own law and politics.
+              </div>
+            </li>
+          </ul>
+
+          <div class="status-strip" aria-label="Project status">
+            <div class="status-item">
+              <strong>Status</strong>
+              <span>Active prototype</span>
+            </div>
+            <div class="status-item">
+              <strong>Reference instance</strong>
+              <span>Canada</span>
+            </div>
+            <div class="status-item">
+              <strong>Delivery model</strong>
+              <span>Pages + GitHub API</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section aria-labelledby="start-heading" style="margin-top: 2.6rem;">
+        <h2 class="section-heading" id="start-heading">Start Here</h2>
+        <div class="entry-grid">
+          <article class="entry-card">
+            <h3>Read the manifesto</h3>
+            <p>Open the styled manifesto browser and read the Canada reference instance article by article.</p>
+            <a href="./site/index.html">Open manifesto</a>
+          </article>
+          <article class="entry-card">
+            <h3>Follow live proposals</h3>
+            <p>See open pull requests, proposal status, and the public review surface for governance changes.</p>
+            <a href="./site/proposals.html">View proposals</a>
+          </article>
+          <article class="entry-card">
+            <h3>Inspect repository health</h3>
+            <p>Browse the governance dashboard for CI status, ADR count, recent commits, and contributor activity.</p>
+            <a href="./site/dashboard.html">Open health dashboard</a>
+          </article>
+          <article class="entry-card">
+            <h3>Launch a new instance</h3>
+            <p>Use the framework for your own community, movement, organization, or local democratic experiment.</p>
+            <a href="./site/new-instance.html">Start a new instance</a>
+          </article>
+          <article class="entry-card">
+            <h3>Learn the contribution flow</h3>
+            <p>Read the participant guide, issue templates, and proposal process on GitHub.</p>
+            <a href="https://github.com/pancakesaregood/potato/blob/main/docs/how_to_participate.md" target="_blank" rel="noopener">Read participation guide</a>
+          </article>
+          <article class="entry-card">
+            <h3>See the roadmap</h3>
+            <p>Track the project phases, architecture decisions, and pending infrastructure work.</p>
+            <a href="https://github.com/pancakesaregood/potato/blob/main/ROADMAP.md" target="_blank" rel="noopener">Open roadmap</a>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="ops-section" aria-labelledby="ops-heading">
+      <div class="ops-grid">
+        <article class="ops-panel">
+          <h3 id="ops-heading">Version controlled governance</h3>
+          <p>Constitutions, bylaws, experiments, and manifesto articles live as plain text with a public audit trail.</p>
+        </article>
+        <article class="ops-panel">
+          <h3>Reviewable by humans and agents</h3>
+          <p>Codex, Claude, Gemini, and human contributors all work against the same repository contract.</p>
+        </article>
+        <article class="ops-panel">
+          <h3>Structured for policy iteration</h3>
+          <p>Proposals can be drafted, tested, challenged, merged, archived, or reopened without losing history.</p>
+        </article>
+        <article class="ops-panel">
+          <h3>Charter-aware process</h3>
+          <p>Rights review is treated as a required governance gate, even when automation is only acting as a placeholder.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Potato - open source governance framework -
+      <a href="https://github.com/pancakesaregood/potato" target="_blank" rel="noopener">source on GitHub</a>
+    </p>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#E8D5B7',
+        primaryTextColor: '#2C1A0E',
+        primaryBorderColor: '#6B4226',
+        lineColor: '#6B4226',
+        secondaryColor: '#FAF4EC',
+        tertiaryColor: '#FFFFFF',
+        clusterBkg: '#FAF4EC',
+        clusterBorder: '#C49A6C',
+        fontFamily: 'system-ui, -apple-system, Segoe UI, sans-serif'
+      },
+      flowchart: {
+        curve: 'basis',
+        useMaxWidth: true,
+        htmlLabels: true
+      }
+    });
+  </script>
+</body>
+</html>
