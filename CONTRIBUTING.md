@@ -193,6 +193,20 @@ New instance? See [`INSTANCE_GUIDE.md`](INSTANCE_GUIDE.md).
 
 ---
 
+## License and Contribution Terms
+
+By submitting a contribution to this repository, you represent that you have
+the right to submit it and that you are licensing it under the
+[MIT License](LICENSE).
+
+Contributors do not receive rights to the PPPC name, logos, slogans, or other
+branding through that license. See [TRADEMARKS.md](TRADEMARKS.md).
+
+If your contribution includes third-party material, you are responsible for
+ensuring that its license is compatible and properly attributed.
+
+---
+
 ## Documentation Guidelines
 
 When writing or editing documentation:

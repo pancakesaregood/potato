@@ -4,6 +4,20 @@ All notable governance changes should be recorded in this file.
 
 The format is based on Keep a Changelog, adapted for governance documents.
 
+## [0.7.1] - 2026-03-16
+
+### Added
+
+- `LICENSE` - repository-wide MIT license for code, documentation, templates,
+  and governance text unless otherwise noted.
+- `TRADEMARKS.md` - reservation of PPPC names, logos, slogans, and other
+  branding so forks can reuse the framework without implying official status.
+
+### Changed
+
+- `README.md`, `CONTRIBUTING.md`, and `AGENTS.md` now explain the repository
+  license model, contribution terms, and branding limits.
+
 ## [0.7.0] - 2026-03-15
 
 ### Added

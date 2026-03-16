@@ -157,3 +157,16 @@ together. The operational contract for AI agents lives in [AGENTS.md](AGENTS.md)
 Agents assist with documentation, review analysis, and governance validation.
 They do not merge PRs, do not change constitutional meaning without explicit
 human approval, and must label their contributions clearly.
+
+---
+
+## License
+
+Repository contents are licensed under the [MIT License](LICENSE) unless a file
+states otherwise.
+
+The MIT License does not grant rights to party names, logos, slogans, or other
+branding. See [TRADEMARKS.md](TRADEMARKS.md).
+
+Forks and derivatives are welcome, but they must not imply official status,
+endorsement, or affiliation with the Peoples Potato Party of Canada.

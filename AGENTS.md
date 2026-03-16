@@ -72,6 +72,15 @@ Before finishing an edit, agents should expect these checks to pass:
 - Charter compliance placeholder review
 - policy consistency validation
 
+## Licensing
+
+- New repository content is MIT-licensed unless a task explicitly introduces a
+  different license.
+- Do not remove or weaken [LICENSE](LICENSE) or [TRADEMARKS.md](TRADEMARKS.md)
+  without an explicit human request.
+- Reuse of repository content is allowed, but agent-written changes must not
+  imply endorsement, official PPPC status, or rights to reserved branding.
+
 ## Writing Style
 
 - Use Markdown.
